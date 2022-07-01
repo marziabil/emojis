@@ -18,10 +18,10 @@ class LeftEye(object):
             arc(75, 75, 32.5, 32.5, 0, PI)
         else: #horizontal v-shaped
             strokeWeight(6) #upper half of v
-            line(55,75,75,85)
+            line(45,75,65,85)
             strokeWeight(8)
-            line(75,85,95,95)
+            line(65,85,85,95)
             strokeWeight(8) #lower half of v
-            line(75,105, 95, 95)
+            line(65,105, 85, 95)
             strokeWeight(6)
-            line(55, 115, 75, 105)
+            line(45, 115, 65, 105)
