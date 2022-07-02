@@ -2,16 +2,18 @@ from face import Face
 from left_eye import LeftEye
 from right_eye import RightEye
 from mouth import Mouth
+from left_eyebrow import lEyeBrow
 
 
 def setup(): 
     size(200, 200)
     #background(0)
-    global face1, eyeL, eyeR, mouth1
-    face1 = Face(width * 0.5, height * 0.5, 150, 150)
-    eyeL = LeftEye(width * 0.375,height * 0.4,5,12,'frown') #eye type - frown, oval
-    eyeR = RightEye(width * 0.625,height * 0.4,5,12, 'frown') # #eye type - frown, oval
-    mouth1 = Mouth(100, 150, 70, 50, PI, TWO_PI, "frown", CHORD)
+    global face1, eyeL, eyeR, mouth1, ebL
+    face1 = Face()
+    eyeL = LeftEye('x') #eye type - enter frown, oval or v shaped
+    eyeR = RightEye('x') # eye type - frown, oval or v shaped
+    mouth1 = Mouth( "x", CHORD) # mouth type, frown, open or zig-zag
+    ebL = lEyeBrow()
     
 def draw():
     background(255)
@@ -19,3 +21,5 @@ def draw():
     eyeL.display()
     eyeR.display()
     mouth1.display()
+    ebL.display()
+    

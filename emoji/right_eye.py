@@ -1,11 +1,7 @@
 class RightEye(object):
     
     #constructor
-    def __init__(self, x, y, a, b, eyeType):
-        self.x = x # x-coordinate
-        self.y = y # y-coordinate
-        self.eyeWidth = 5 #Diameter of the eye
-        self.eyeHeight = 12 #Eye height
+    def __init__(self, eyeType):
         self.color = color(0) #color of eye
         self.eyeType = eyeType
         
@@ -13,7 +9,8 @@ class RightEye(object):
         if self.eyeType == 'oval':
             strokeWeight(8)
             fill(self.color)
-            ellipse(self.x, self.y, self.eyeWidth, self.eyeHeight)
+            #ellipse(self.x, self.y, self.eyeWidth, self.eyeHeight)
+            ellipse(width * 0.625,height * 0.4,5,12)
         elif self.eyeType == 'frown': #frowning eyes
             arc(125, 75, 32.5, 32.5, 0, PI)
         else: #horizontal v-shaped
