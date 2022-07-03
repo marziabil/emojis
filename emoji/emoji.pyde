@@ -10,10 +10,10 @@ def setup():
     #background(0)
     global face1, eyeL, eyeR, mouth1, ebL
     face1 = Face()
-    eyeL = LeftEye('x') #eye type - enter frown, oval or v shaped
-    eyeR = RightEye('x') # eye type - frown, oval or v shaped
-    mouth1 = Mouth( "x", CHORD) # mouth type, frown, open or zig-zag
-    ebL = lEyeBrow()
+    eyeL = LeftEye('oval') #eye type - enter frown, oval or v shaped
+    eyeR = RightEye('oval') # eye type - frown, oval or v shaped
+    mouth1 = Mouth( 'zig-zag') # mouth type, frown, open or zig-zag
+    ebL = lEyeBrow('x') 
     
 def draw():
     background(255)

@@ -10,7 +10,7 @@ class RightEye(object):
             strokeWeight(8)
             fill(self.color)
             #ellipse(self.x, self.y, self.eyeWidth, self.eyeHeight)
-            ellipse(width * 0.625,height * 0.4,5,12)
+            ellipse(125,80,5,12)
         elif self.eyeType == 'frown': #frowning eyes
             arc(125, 75, 32.5, 32.5, 0, PI)
         else: #horizontal v-shaped

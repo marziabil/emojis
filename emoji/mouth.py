@@ -1,20 +1,21 @@
 class Mouth(object):
     
     #constructor
-    def __init__(self, mouthType, g):
+    def __init__(self, mouthType):
         self.color = color(0)
         self.mouthType = mouthType #frowning; open and frowning 
-        self.g = g #mode of the arc
+        #self.g = g #mode of the arc
         
     def display(self):
         if self.mouthType == "frown":
             strokeWeight(6)
-            arc(self.x, self.y, self.c, self.d, PI, TWO_PI) #frowning face
+            noFill()
+            arc(100, 150, 70, 50, PI, TWO_PI) #frowning face
         elif self.mouthType == "open": #open mouth
             strokeWeight(6)
             fill(0)
-            self.g = CHORD
-            arc(self.x, self.y, self.c, self.d, PI, TWO_PI, self.g)
+            #self.g = CHORD
+            arc(100, 150, 70, 50, PI, TWO_PI, CHORD)
         else: #zigzag mouth
             stroke(0)
             strokeWeight(8)
