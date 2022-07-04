@@ -10,7 +10,7 @@ class Mouth(object):
         if self.mouthType == "frown":
             strokeWeight(6)
             noFill()
-            arc(100, 150, 70, 50, PI, TWO_PI) #frowning face
+            arc(100, 140, 70, 40, PI, TWO_PI) #frowning face
         elif self.mouthType == "open": #open mouth
             strokeWeight(6)
             fill(0)
