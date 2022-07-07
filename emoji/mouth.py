@@ -26,7 +26,7 @@ class Mouth(object):
             stroke(0)
             strokeWeight(8)
             line(130, 145, 140, 135 )
-        elif self.xEmotion < 0 and self.xEmotion > -0.69 and self.yEmotion < 0 and self.yEmotion > -0.69:
+        elif self.xEmotion < 0 and self.xEmotion >= -0.7 and self.yEmotion < 0 and self.yEmotion >= -0.7:
         #frowning face
             strokeWeight(6)
             noFill()

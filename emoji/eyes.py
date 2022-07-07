@@ -8,7 +8,7 @@ class Eyes(object):
         self.yEmotion = yEmotion #y coordinate of emotion - arousal
     
     def display(self):    
-        if self.xEmotion < -0.89 or self.yEmotion < -0.89:  #v-shaped eyes
+        if self.xEmotion <= -0.9 or self.yEmotion <= -0.9:  #v-shaped eyes
             stroke(self.color)
             strokeWeight(6) #upper half of v and thinner part
             line(45,75,65,85)
@@ -29,7 +29,7 @@ class Eyes(object):
             line(115, 95, 135, 105)
             strokeWeight(6) # lower half of v
             line(135, 105, 155, 115) 
-        elif (self.xEmotion < 0 and self.xEmotion > -0.49) or (self.yEmotion < 0 and self.yEmotion > -0.49):
+        elif (self.xEmotion < 0 and self.xEmotion >= -0.5) or (self.yEmotion < 0 and self.yEmotion >= -0.5):
             #oval eyes
             strokeWeight(10)
             stroke(0) #color black

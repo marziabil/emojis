@@ -10,13 +10,13 @@ class Eyebrows(object):
             noStroke()
             noFill()
         #horizontal arc
-        elif self.xEmotion < 0.55 and self.xEmotion > -0.69 and self.yEmotion < -0.1 and self.yEmotion > -0.29:
+        elif self.xEmotion <= 0.55 and self.xEmotion >= -0.7 and self.yEmotion < -0.1 and self.yEmotion >= -0.3:
             strokeWeight(5)
             noFill()
             stroke(204, 153, 0)
             arc(75, 65, 37.5, 12.5, PI, TWO_PI) #left eyebrow
             arc(125, 65, 37.5, 12.5, PI, TWO_PI) #right eyebrow
-        elif self.xEmotion < -0.69 and self.xEmotion > -0.79 and self.yEmotion < -0.29 and self.yEmotion > -0.79:
+        elif self.xEmotion <= -0.7 and self.xEmotion >= -0.8 and self.yEmotion <= -0.3 and self.yEmotion >= -0.8:
         #slightly furrowed 
             stroke(204, 153, 0)
             strokeWeight(6)
