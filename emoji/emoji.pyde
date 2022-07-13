@@ -8,7 +8,7 @@ from eyes import Eyes
 from mouth import Mouth
 from eyebrows import Eyebrows
 
-xEmotion = -0.66 #enter x coordinate here (only negative coordinates will work for now)
+xEmotion = -0.8 #enter x coordinate here (only negative coordinates will work for now)
 yEmotion = -0.5 #enter y coordinate here (only negative coordinates will work for now)
 
 def setup(): 
