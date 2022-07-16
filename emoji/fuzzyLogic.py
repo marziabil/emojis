@@ -13,7 +13,7 @@ S_5 = sf.FuzzySet( points= [[8,0], [9,1], [10,1]], term="very_high")
 FS.add_linguistic_variable("Arousal", sf.LinguisticVariable( [S_1, S_2, S_3, S_4, S_5]))
 
 #define linguistic variable - valence
-F_1 = sf.FuzzySet( points=[[0,1], [ 1,1], [2,1]] , term="very_low" )
+F_1 = sf.FuzzySet( points=[[0,1], [ 1,1], [2,0]] , term="very_low" )
 F_2 = sf.FuzzySet( points=[ [1,0],[2,1], [3.5,1], [5,0]], term="low")
 F_3 = sf.FuzzySet( points = [ [3,0], [4,1], [5.5, 1], [7,0]], term="medium")
 F_4 = sf.FuzzySet( points = [ [5,0], [5.5,1], [8.5,1], [9,0]], term="high" )
@@ -31,7 +31,7 @@ FS.set_crisp_output_value("VERY HIGH", 1)
 #Mouth
 #very low mouth is zigzag, low is frowning, 
 RULE1 = "IF(Valence IS low) AND (Arousal IS low) THEN (Mouth IS LOW)"
-RULE2 = "IF(Valence IS very_low) THEN (Mouth IS VERY LOW)"
+RULE2 = "IF(Valence IS very_low) THEN (Mouth IS VERY LOW)" 
 RULE3 = "IF (Valence IS low) AND (Arousal IS very_low) THEN (Mouth IS VERY LOW)" #open mouth. how do i indicate this?
 FS.add_rules([RULE1, RULE2, RULE3])
 
