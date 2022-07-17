@@ -7,7 +7,7 @@ class Mouth(object):
         self.yArousal = yArousal #y coordinate of emotion - arousal
         
     def display(self):
-        if self.xValence < -0.85: #zigzag mouth
+        if self.xValence < -0.85: #crumpled mouth
             stroke(0)
             strokeWeight(8)
             line(60, 135, 70, 145)
