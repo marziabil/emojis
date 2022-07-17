@@ -1,13 +1,13 @@
 class Mouth(object):
     
     #constructor
-    def __init__(self, xEmotion, yEmotion):
+    def __init__(self, xValence, yArousal):
         self.color = color(0)
-        self.xEmotion = xEmotion #x coordinate of emotion - valence
-        self.yEmotion = yEmotion #y coordinate of emotion - arousal
+        self.xValence = xValence #x coordinate of emotion - valence
+        self.yArousal = yArousal #y coordinate of emotion - arousal
         
     def display(self):
-        if self.xEmotion < -0.85: #zigzag mouth
+        if self.xValence < -0.85: #zigzag mouth
             stroke(0)
             strokeWeight(8)
             line(60, 135, 70, 145)
@@ -26,7 +26,7 @@ class Mouth(object):
             stroke(0)
             strokeWeight(8)
             line(130, 145, 140, 135 )
-        elif self.xEmotion < 0 and self.xEmotion >= -0.7 and self.yEmotion < 0 and self.yEmotion >= -0.7:
+        elif self.xValence < 0 and self.xValence >= -0.7 and self.yArousal < 0 and self.yArousal >= -0.7:
         #frowning face
             strokeWeight(6)
             noFill()

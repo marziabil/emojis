@@ -8,16 +8,16 @@ from eyes import Eyes
 from mouth import Mouth
 from eyebrows import Eyebrows
 
-xEmotion = 0.7 #enter x coordinate here (only negative coordinates will work for now)
-yEmotion = -0.8 #enter y coordinate here (only negative coordinates will work for now)
+xValence = 0.7 #enter x coordinate here (only negative coordinates will work for now)
+yArousal = -0.8 #enter y coordinate here (only negative coordinates will work for now)
 
 def setup(): 
     size(200, 200)
     global face1, eyes, mouth1, eyeBrows
     face1 = Face()
-    eyes = Eyes(xEmotion, yEmotion) 
-    mouth1 = Mouth(xEmotion, yEmotion) 
-    eyeBrows = Eyebrows(xEmotion, yEmotion)
+    eyes = Eyes(xValence, yArousal) 
+    mouth1 = Mouth(xValence, yArousal) 
+    eyeBrows = Eyebrows(xValence, yArousal)
     
 def draw():
     background(255)

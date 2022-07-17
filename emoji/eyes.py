@@ -1,14 +1,14 @@
 class Eyes(object):
     
     #constructor
-    def __init__(self, xEmotion, yEmotion):
+    def __init__(self, xValence, yArousal):
         self.color = color(0) #color of eye - black
         #self.eyeType = eyeType #frowning, oval 
-        self.xEmotion = xEmotion #x coordinate of emotion - valence
-        self.yEmotion = yEmotion #y coordinate of emotion - arousal
+        self.xValence = xValence #x coordinate of emotion - valence
+        self.yArousal = yArousal #y coordinate of emotion - arousal
     
     def display(self):    
-        if self.xEmotion <= -0.9 or self.yEmotion <= -0.9:  #v-shaped eyes
+        if self.xValence <= -0.9 or self.yArousal <= -0.9:  #v-shaped eyes
             stroke(self.color)
             strokeWeight(6) #upper half of v and thinner part
             line(45,75,65,85)
@@ -29,7 +29,7 @@ class Eyes(object):
             line(115, 95, 135, 105)
             strokeWeight(6) # lower half of v
             line(135, 105, 155, 115) 
-        elif (self.xEmotion < 0 and self.xEmotion >= -0.5) or (self.yEmotion < 0 and self.yEmotion >= -0.5):
+        elif (self.xValence < 0 and self.xValence >= -0.5) or (self.yArousal < 0 and self.yArousal >= -0.5):
             #oval eyes
             strokeWeight(10)
             stroke(0) #color black
