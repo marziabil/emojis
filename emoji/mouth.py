@@ -6,7 +6,12 @@ class Mouth(object):
         self.color = color(0)
         self.xValence = xValence #x coordinate of emotion - valence
         self.yArousal = yArousal #y coordinate of emotion - arousal
-        
+
+    # def clenchedMouth(self):
+    #     stroke(0)
+    #     fill(255)
+    #     rect(65, 120, 70, 20, 7)
+
     def display(self):
         if self.xValence < -0.85: #crumpled mouth
             stroke(0)
@@ -65,5 +70,19 @@ class Mouth(object):
             strokeWeight(6)
             noFill()
             arc(width * 0.5, height * 0.6, 80, 37, 0, radians(180))
+        elif self.xValence < 0 and self.xValence >= -0.1 and self.yArousal >= 0.7 and self.yArousal <= 0.9:
+            #clenched teeth
+            stroke(0)
+            fill(255)
+            rect(65, 120, 70, 20, 7)
+            line(65, 130, 135, 130) #horizontal line
+            line(75, 120, 75, 140)
+            line(85, 120, 85, 140)
+            line(95, 120, 95, 140)
+            line(105, 120, 105, 140)
+            line(115, 120, 115, 140)
+            line(125, 120, 125, 140)
         else: 
-            
+            #straight line
+            strokeWeight(5)
+            line(65, 130, 135, 130)
