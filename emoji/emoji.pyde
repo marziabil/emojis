@@ -8,8 +8,8 @@ from eyes import Eyes
 from mouth import Mouth
 from eyebrows import Eyebrows
 
-xValence = -0.5 #enter x coordinate here (only negative coordinates will work for now)
-yArousal = 0.5 #enter y coordinate here (only negative coordinates will work for now)
+xValence = -0.5 #enter x coordinate here 
+yArousal = 0.5 #enter y coordinate here 
 
 def setup(): 
     size(200, 200)

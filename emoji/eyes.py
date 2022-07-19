@@ -1,10 +1,11 @@
 class Eyes(object):
     
     #constructor
-    def __init__(self, xValence, yArousal):
+    def __init__(self, xValence, yArousal, eyeType):
         self.color = color(0) #color of eye - black
         self.xValence = xValence #x coordinate of emotion - valence
         self.yArousal = yArousal #y coordinate of emotion - arousal
+        self.eyeType = eyeType
     
     def display(self): 
         #x-shaped eyes   
