@@ -8,16 +8,19 @@ from eyes import Eyes
 from mouth import Mouth
 from eyebrows import Eyebrows
 
-xValence = -0.3 #enter x coordinate here 
-yArousal = 0.5 #enter y coordinate here 
+faceColour = "yellow"
+eyeType = "xShaped"
+mouthType = "frowning"
+ebType = "straight"
+
 
 def setup(): 
     size(200, 200)
     global face1, eyes, mouth1, eyeBrows
-    face1 = Face(xValence, yArousal)
-    eyes = Eyes(xValence, yArousal) 
-    mouth1 = Mouth(xValence, yArousal) 
-    eyeBrows = Eyebrows(xValence, yArousal)
+    face1 = Face(faceColour)
+    eyes = Eyes(eyeType) 
+    mouth1 = Mouth(mouthType) 
+    eyeBrows = Eyebrows(ebType)
     
 def draw():
     background(255)
