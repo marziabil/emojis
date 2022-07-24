@@ -9,9 +9,9 @@ from mouth import Mouth
 from eyebrows import Eyebrows
 
 faceColour = "yellow"
-eyeType = "oval"
-mouthType = "smile"
-ebType = "straight"
+eyeType = "wideOpenEyes"
+mouthType = "happy"
+ebType = "no_eyebrows"
 
 
 def setup(): 

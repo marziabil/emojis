@@ -1,16 +1,16 @@
-from simpful import *
+# from simpful import *
 # # import numpy as np
-# import simpful as sf
+import simpful as sf
 
-FS = sf.FuzzySystem()
+FS = FuzzySystem()
 
 # #define linguistic variable - arousal - (y axis in scherer's model)
-# A_1 = sf.FuzzySet( points=[[0,1], [ 2,2], [4,0]] , term="very_low" )
-# A_2 = sf.FuzzySet( points=[ [1,0],[3,1], [8,1], [11,0]], term="low")
-# A_3 = sf.FuzzySet( points = [ [6,0], [8.5,1], [11.5, 1], [14,0]], term="medium")
-# A_4 = sf.FuzzySet( points = [ [8,0], [12,1], [17,1], [19,0]], term="high" )
-# A_5 = sf.FuzzySet( points= [[16,0], [18,1], [20,1]], term="very_high")
-# FS.add_linguistic_variable("Arousal", sf.LinguisticVariable( [A_1, A_2, A_3, A_4, A_5]))
+A_1 = sf.FuzzySet( points=[[0,1], [ 2,2], [4,0]] , term="very_low" )
+A_2 = sf.FuzzySet( points=[ [1,0],[3,1], [8,1], [11,0]], term="low")
+A_3 = sf.FuzzySet( points = [ [6,0], [8.5,1], [11.5, 1], [14,0]], term="medium")
+A_4 = sf.FuzzySet( points = [ [8,0], [12,1], [17,1], [19,0]], term="high" )
+A_5 = sf.FuzzySet( points= [[16,0], [18,1], [20,1]], term="very_high")
+FS.add_linguistic_variable("Arousal", sf.LinguisticVariable( [A_1, A_2, A_3, A_4, A_5]))
 
 # #define linguistic variable - valence - (x axis in scherer's model)
 # V_1 = sf.FuzzySet( points=[[0,1], [ 2,2], [4,0]] , term="very_low" )
