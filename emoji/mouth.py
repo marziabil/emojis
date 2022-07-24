@@ -63,7 +63,7 @@ class Mouth(object):
         fill(255, 0, 102)
         arc(width * 0.5, height * 0.80, 23, 15, PI, TWO_PI, CHORD)
 
-    def unknownMouth(self):
+    def smileHigh(self):
         strokeWeight(6)
         noFill()
         arc(width * 0.5, height * 0.6, 80, 37, 0, radians(180))
@@ -97,8 +97,8 @@ class Mouth(object):
             self.shortStraight()
         elif self.mouthType == "happy":
             self.happyMouth()
-        elif self.mouthType == "unknown":
-            self.unknownMouth()
+        elif self.mouthType == "smileHigh":
+            self.smileHigh()
         elif self.mouthType == "clenched":
             self.clenchedTeeth()
         else: 

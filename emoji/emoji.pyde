@@ -9,8 +9,8 @@ from mouth import Mouth
 from eyebrows import Eyebrows
 
 faceColour = "yellow"
-eyeType = "xShaped"
-mouthType = "frowning"
+eyeType = "oval"
+mouthType = "smile"
 ebType = "straight"
 
 

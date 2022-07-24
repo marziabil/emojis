@@ -1,8 +1,8 @@
-# # from simpful import *
+from simpful import *
 # # import numpy as np
 # import simpful as sf
 
-# FS = sf.FuzzySystem()
+FS = sf.FuzzySystem()
 
 # #define linguistic variable - arousal - (y axis in scherer's model)
 # A_1 = sf.FuzzySet( points=[[0,1], [ 2,2], [4,0]] , term="very_low" )
