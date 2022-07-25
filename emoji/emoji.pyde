@@ -8,11 +8,13 @@ from eyes import Eyes
 from mouth import Mouth
 from eyebrows import Eyebrows
 
+from fuzzyLogic import mouthType
+from simpful import FuzzySystem, FuzzySet, Trapezoidal_MF, LinguisticVariable
+
 faceColour = "yellow"
 eyeType = "wideOpenEyes"
 mouthType = "happy"
 ebType = "no_eyebrows"
-
 
 def setup(): 
     size(200, 200)
@@ -28,4 +30,6 @@ def draw():
     eyes.display()
     mouth1.display()
     eyeBrows.display()
+    mouthType()
+
     

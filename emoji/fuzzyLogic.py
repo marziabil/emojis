@@ -1,4 +1,4 @@
-from simpful import *
+from simpful import FuzzySystem, FuzzySet, Trapezoidal_MF, LinguisticVariable
 
 FS = FuzzySystem()
 
@@ -37,7 +37,11 @@ FS.set_variable("Valence", 9)
 FS.set_variable("Arousal", 2)
 
 # Perform Mamdani inference and print output
+# def mouthType(self):
 print(FS.Mamdani_inference(["mouthType"]))
+
+
+
 
 
 
