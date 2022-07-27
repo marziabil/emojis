@@ -31,10 +31,10 @@ def setup():
     eyeBrows = Eyebrows(ebType) 
 
 def draw():
-    face.display()
-    eyes.display()
-    mouth.display()
-    eyeBrows.display()
+    face.draw()
+    eyes.draw()
+    mouth.draw()
+    eyeBrows.draw()
 
 py5.run_sketch()
 
