@@ -1,4 +1,5 @@
 from simpful import FuzzySystem, FuzzySet, Trapezoidal_MF, LinguisticVariable
+# from simpful import *
 
 FS = FuzzySystem()
 
@@ -36,9 +37,24 @@ FS.add_rules([R1,R2, R3])
 FS.set_variable("Valence", 9)
 FS.set_variable("Arousal", 2)
 
-# Perform Mamdani inference and print output
-# def mouthType(self):
+# print output
 print(FS.Mamdani_inference(["mouthType"]))
+
+
+# Perform Mamdani inference and print output
+def mouth_Type():
+    return(FS.Mamdani_inference(["mouthType"]))
+
+# mouth_Type()
+
+def mouthForEmoji():
+    if mouth_Type < 9:
+        mouthForEmoji = "smile"
+    else: 
+        mouthForEmoji = "frowning"
+
+
+# self.mouth_Type()
 
 
 

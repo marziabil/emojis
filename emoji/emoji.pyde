@@ -7,13 +7,16 @@ from face import Face
 from eyes import Eyes
 from mouth import Mouth
 from eyebrows import Eyebrows
+from fuzzyLogic import mouthForEmoji
 
-from fuzzyLogic import mouthType
-from simpful import FuzzySystem, FuzzySet, Trapezoidal_MF, LinguisticVariable
+
+# from fuzzyLogic import mouthForEmoji, mouthType
+# from simpful import FuzzySystem, FuzzySet, Trapezoidal_MF, LinguisticVariable
 
 faceColour = "yellow"
 eyeType = "wideOpenEyes"
-mouthType = "happy"
+# mouthType = "happy"
+mouthType = mouthForEmoji()
 ebType = "no_eyebrows"
 
 def setup(): 
@@ -30,6 +33,6 @@ def draw():
     eyes.display()
     mouth1.display()
     eyeBrows.display()
-    mouthType()
+    # mouthType()
 
     
