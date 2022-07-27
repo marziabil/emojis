@@ -20,5 +20,5 @@ class Face(Sketch):
             self.fill(255, 80, 80) #red color face
             self.makeFace()
 
-face = Face()          
+      
         
