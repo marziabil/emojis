@@ -1,3 +1,4 @@
+
 from simpful import FuzzySystem, FuzzySet, Trapezoidal_MF, LinguisticVariable
 # from simpful import *
 

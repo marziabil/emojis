@@ -1,24 +1,15 @@
-from py5 import Sketch
+import py5
 
-class Face(Sketch):
+def makeFace():
+    py5.stroke_weight(5)
+    py5.stroke(0)
+    py5.ellipse(py5.width * 0.5, py5.height * 0.5, 150, 150)
 
-    def __init__(self, faceColour):
-        # self.xValence = xValence #x coordinate of emotion - valence
-        # self.yArousal = yArousal #y coordinate of emotion - arousal
-        self.faceColour = faceColour
-
-    def makeFace(self):
-        self.stroke_weight(5)
-        self.stroke(0)
-        self.ellipse(self.width * 0.5, self.height * 0.5, 150, 150)
-
-    def draw(self):
-        if self.faceColour == "yellow":
-            self.makeFace()
-            self.fill(255, 204, 0) #yellow face
-        else: 
-            self.fill(255, 80, 80) #red color face
-            self.makeFace()
-
-      
+def drawFace(faceColour):
+    if faceColour == "yellow":
+        py5.fill(255, 204, 0) #yellow face
+        makeFace()
+    else: 
+        py5.fill(255, 80, 80) #red color face
+        makeFace()
         
