@@ -39,30 +39,31 @@ FS.add_linguistic_variable ("emotionalState", LinguisticVariable([F_1, F_2, F_3,
 #veryLow Valence
 R1 = "IF (Valence IS veryLow) AND (Arousal IS veryLow) THEN ((emotionalState IS veryUnpleasant) NOT (emotionalState IS unpleasant))"
 R2 = "IF ((Valence IS veryLow) AND (Arousal IS low)) THEN ((emotionalState IS unpleasant) OR (emotionalState IS neutral) NOT (emotionalState IS pleasant)) "
-R3 = "IF ((Valence IS veryLow) AND (Arousal IS veryHigh)) OR ((Valence IS veryLow) AND (Arousal IS medium)) THEN ((emotionalState IS neutral) OR (emotionalState IS unpleasant) NOT (emotionalState IS pleasant)) "
+R3 = "IF ((Valence IS veryLow) AND (Arousal IS veryHigh)) OR ((Valence IS veryLow) AND (Arousal IS medium)) THEN (emotionalState IS unpleasant) NOT (emotionalState IS neutral)) "
 #Low Valence
 R4 = "IF (Valence IS low) AND (Arousal IS veryLow) THEN (emotionalState IS veryUnpleasant)"
-R5 = "IF ((Valence IS low) AND (Arousal IS low)) THEN ((emotionalState IS unpleasant) NOT (emotionalState IS neutral)) "
-R6 = "IF ((Valence IS low) AND (Arousal IS high)) OR ((Valence IS low) AND (Arousal IS veryHigh)) THEN ((emotionalState IS neutral) NOT (emotionalState IS pleasant))"
+R5 = "IF ((Valence IS low) AND (Arousal IS low)) THEN (((emotionalState IS neutral) OR (emotionalState IS unpleasant))  NOT (emotionalState IS pleasant))) "
+R6 = "IF ((Valence IS low) AND (Arousal IS high)) OR ((Valence IS low) AND (Arousal IS veryHigh)) THEN ((emotionalState IS unpleasant) NOT ((emotionalState IS neutral) OR (emotionalState IS pleasant))"
 
 #Medium Valence
-R7 = "IF ((Valence IS medium) AND (Arousal IS high)) OR ((Valence IS medium) AND (Arousal IS veryHigh)) THEN (emotionalState IS neutral) "
-R8 = "IF ((Valence IS medium) AND (Arousal IS veryLow)) OR ((Valence IS low) AND (Valence IS medium)) OR ((Valence IS veryLow) AND (Arousal IS high)) THEN ((emotionalState IS unpleasant) NOT (emotionalState IS neutral)) "
-R9 = "IF ((Valence IS medium) AND (Arousal IS low)) THEN ((emotionalState IS neutral) NOT (emotionalState IS pleasant))"
+R7 = "IF ((Valence IS medium) AND (Arousal IS high)) OR ((Valence IS medium) AND (Arousal IS veryHigh)) THEN ((emotionalState IS neutral) OR (emotionalState IS pleasant))"
+R8 = "IF ((Valence IS medium) AND (Arousal IS veryLow)) OR ((Valence IS low) AND (Valence IS medium)) OR ((Valence IS veryLow) AND (Arousal IS high)) THEN ((emotionalState IS unpleasant) NOT (emotionalState IS pleasant)) "
+R9 = "IF ((Valence IS medium) AND (Arousal IS low)) OR ((Valence IS medium) AND (Arousal IS medium)) THEN ((emotionalState IS unpleasant) OR emotionalState IS neutral))"
 #High Valence
-R10 = "IF ((Valence IS high) AND (Arousal IS veryLow)) THEN ((emotionalState IS pleasant) OR (emotionalState IS neutral) NOT ((emotionalState IS veryPleasant)) AND (emotionalState IS unpleasant)))"
-R11 = "IF ((Valence IS high) AND (Arousal IS low)) OR ((Valence IS high) AND (Arousal IS medium)) THEN ((emotionalState IS pleasant) NOT (emotionalState IS veryPleasant)) "
+R10 = "IF ((Valence IS high) AND (Arousal IS veryLow)) THEN (emotionalState IS unpleasant)"
+R11 = "IF ((Valence IS high) AND (Arousal IS low)) THEN (emotionalState IS pleasant) "
 R12 = "IF ((Valence IS high) AND (Arousal IS high)) OR ((Valence IS high) AND (Arousal IS veryHigh)) THEN ((emotionalState IS pleasant) NOT (emotionalState IS veryPleasant)) "
 #Very high valence
-R13 = "IF ((Valence IS veryHigh) AND (Arousal IS veryLow)) THEN ((emotionalState IS pleasant) NOT (emotionalState IS unpleasant))"
-R14 = "IF ((Valence IS veryHigh) AND (Arousal IS low)) OR ((Valence IS veryHigh) AND (Arousal IS medium)) THEN ((emotionalState IS pleasant) NOT (emotionalState IS neutral)) "
+R13 = "IF ((Valence IS veryHigh) AND (Arousal IS veryLow)) OR ((Valence IS veryHigh) AND (Arousal IS low)) THEN (emotionalState IS neutral)"
+R14 = "IF ((Valence IS veryHigh) AND (Arousal IS high)) OR ((Valence IS veryHigh) AND (Arousal IS medium)) THEN (emotionalState IS pleasant) NOT (emotionalState IS neutral)) "
 R15 = "IF ((Valence IS veryHigh) AND (Arousal IS veryHigh)) THEN ((emotionalState IS veryPleasant) NOT (emotionalState IS pleasant)) "
+# OR ((Valence IS high) AND (Arousal IS medium))  IN R11
 
 FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15])
 
 # Set antecedents values
-FS.set_variable("Valence",14.9) #enter values between 0 to 20
-FS.set_variable("Arousal",19.1) #enter values between 0 to 20
+FS.set_variable("Valence",5) #enter values between 0 to 20
+FS.set_variable("Arousal",0) #enter values between 0 to 20
 
 # print output
 print(FS.Mamdani_inference(["emotionalState"]))
