@@ -38,11 +38,11 @@ FS.add_linguistic_variable ("emotionalState", LinguisticVariable([F_1, F_2, F_3,
 # Define fuzzy rules.
 #veryLow Valence
 R1 = "IF (Valence IS veryLow) AND (Arousal IS veryLow) THEN ((emotionalState IS veryUnpleasant) NOT (emotionalState IS unpleasant))"
-R2 = "IF ((Valence IS veryLow) AND (Arousal IS low)) THEN ((emotionalState IS unpleasant) OR (emotionalState IS neutral) NOT (emotionalState IS pleasant)) "
+R2 = "IF ((Valence IS veryLow) AND (Arousal IS low)) THEN ((emotionalState IS unpleasant) NOT (emotionalState IS neutral))"
 R3 = "IF ((Valence IS veryLow) AND (Arousal IS veryHigh)) OR ((Valence IS veryLow) AND (Arousal IS medium)) THEN (emotionalState IS unpleasant) NOT (emotionalState IS neutral)) "
 #Low Valence
-R4 = "IF (Valence IS low) AND (Arousal IS veryLow) THEN (emotionalState IS veryUnpleasant)"
-R5 = "IF ((Valence IS low) AND (Arousal IS low)) THEN (((emotionalState IS neutral) OR (emotionalState IS unpleasant))  NOT (emotionalState IS pleasant))) "
+R4 = "IF (Valence IS low) AND (Arousal IS veryLow) THEN ((emotionalState IS unpleasant) NOT (emotionalState IS neutral))"
+R5 = "IF ((Valence IS low) AND (Arousal IS low)) THEN (emotionalState IS unpleasant) NOT (emotionalState IS neutral))) "
 R6 = "IF ((Valence IS low) AND (Arousal IS high)) OR ((Valence IS low) AND (Arousal IS veryHigh)) THEN ((emotionalState IS unpleasant) NOT ((emotionalState IS neutral) OR (emotionalState IS pleasant))"
 
 #Medium Valence
