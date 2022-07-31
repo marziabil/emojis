@@ -14,6 +14,11 @@ from mouth import drawMouth
 
 #module mode
 
+xValence = 0.5 #enter x coordinate here
+vArousal = 0.7 #enter y coordinate here
+
+
+
 faceColour = "yellow"
 eyeType = "wideOpenEyes"
 mouthType = "happy"
