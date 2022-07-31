@@ -81,19 +81,18 @@ FS.set_variable("Arousal",finalYArousal) #enter values between 0 to 20
 
 emoState = (FS.Mamdani_inference(["emotionalState"]))
 # print (emoState["emotionalState"])
-emo = float(emoState["emotionalState"])
+floatEmoState = float(emoState["emotionalState"])
 
 # print output
 def findEmotionalState():
     if (finalXValence < 10 and finalYArousal > 10) or (finalXValence > 10 and finalYArousal < 10):
-        # print(emo * -1)
-        return (emo * -1)
+        # print(floatEmoState * -1)
+        return (floatEmoState * -1)
     else:
-        # print (emo)
-        return (emo * 1)
+        # print (floatEmoState)
+        return (floatEmoState * 1)
 
 # findEmotionalState()
-
 
 # FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R20, R21, R22, R23, R24, R25])
 
