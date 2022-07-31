@@ -1,8 +1,8 @@
 
-# from simpful import FuzzySystem, FuzzySet, Trapezoidal_MF, LinguisticVariable, Triangular_MF
-from random import triangular
-from re import X
-from simpful import *
+from simpful import FuzzySystem, FuzzySet, Trapezoidal_MF, LinguisticVariable, Triangular_MF
+from main import xValence, yArousal
+
+# from simpful import *
 
 FS = FuzzySystem()
 
@@ -65,14 +65,14 @@ FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R
 # OR ((Valence IS low) AND (Valence IS medium)) 
 # r8 = ((emotionalState IS unpleasant) OR 
 
-xValence = -0.73
-yArousal = -0.8
+# xValence = -0.3
+# yArousal = 0.8
 
 finalXValence = (xValence + 1) *10
 finalYArousal = (yArousal + 1) *10
 
-# finalXValence = 20
-# finalYArousal = 15
+# finalXValence = 5
+# finalYArousal = 20
 
 
 # Set antecedents values
@@ -86,11 +86,13 @@ emo = float(emoState["emotionalState"])
 # print output
 def findEmotionalState():
     if (finalXValence < 10 and finalYArousal > 10) or (finalXValence > 10 and finalYArousal < 10):
-        print(emo * -1)
+        # print(emo * -1)
+        return (emo * -1)
     else:
-        print (emo)
+        # print (emo)
+        return (emo * 1)
 
-findEmotionalState()
+# findEmotionalState()
 
 
 # FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R20, R21, R22, R23, R24, R25])
