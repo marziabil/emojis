@@ -7,7 +7,7 @@ import py5
 # from eyebrows import drawEyebrows
 # from face import drawFace
 # from mouth import drawMouth
-
+from fuzzyLogic import findEmotionalState
 # from simpful import FuzzySystem, FuzzySet, Trapezoidal_MF, LinguisticVariable
 
 #module mode
@@ -16,8 +16,8 @@ xValence = -0.18 #enter x coordinate here
 vArousal = 0.72 #enter y coordinate here
 
 def getEmotionalState():
-    from fuzzyLogic import findEmotionalState
-    emotionalState = findEmotionalState()
+    
+    emotionalState = findEmotionalState(xValence, vArousal)
     print(emotionalState)
 
 getEmotionalState()

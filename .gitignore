@@ -1,0 +1,3 @@
+__pycache__/
+emoji/__pycache__/*
+*.py[cod]

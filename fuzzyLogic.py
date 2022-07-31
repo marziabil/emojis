@@ -1,6 +1,6 @@
 
 from simpful import FuzzySystem, FuzzySet, Trapezoidal_MF, LinguisticVariable, Triangular_MF
-from main import xValence, yArousal
+# from main import xValence, yArousal
 
 # from simpful import *
 
@@ -68,23 +68,28 @@ FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R
 # xValence = -0.3
 # yArousal = 0.8
 
-finalXValence = (xValence + 1) *10
-finalYArousal = (yArousal + 1) *10
 
-# finalXValence = 5
-# finalYArousal = 20
-
-
-# Set antecedents values
-FS.set_variable("Valence",finalXValence) #enter values between 0 to 20
-FS.set_variable("Arousal",finalYArousal) #enter values between 0 to 20
-
-emoState = (FS.Mamdani_inference(["emotionalState"]))
-# print (emoState["emotionalState"])
-floatEmoState = float(emoState["emotionalState"])
 
 # print output
-def findEmotionalState():
+def findEmotionalState(xValence, yArousal):
+
+
+    finalXValence = (xValence + 1) *10
+    finalYArousal = (yArousal + 1) *10
+
+    # finalXValence = 5
+    # finalYArousal = 20
+
+
+    # Set antecedents values
+    FS.set_variable("Valence",finalXValence) #enter values between 0 to 20
+    FS.set_variable("Arousal",finalYArousal) #enter values between 0 to 20
+
+    emoState = (FS.Mamdani_inference(["emotionalState"]))
+    # print (emoState["emotionalState"])
+    floatEmoState = float(emoState["emotionalState"])
+
+    
     if (finalXValence < 10 and finalYArousal > 10) or (finalXValence > 10 and finalYArousal < 10):
         # print(floatEmoState * -1)
         return (floatEmoState * -1)
