@@ -35,12 +35,12 @@ FS.add_linguistic_variable ("emotionalState", LinguisticVariable([F_1, F_2, F_3,
 # Define fuzzy rules.
 #veryLow Valence
 R1 = "IF (Valence IS veryLow) AND (Arousal IS veryLow) THEN ((emotionalState IS veryUnpleasant) NOT (emotionalState IS unpleasant))"
-R2 = "IF ((Valence IS veryLow) AND (Arousal IS low)) THEN ((emotionalState IS unpleasant) NOT (emotionalState IS neutral))"
-R3 = "IF ((Valence IS veryLow) AND (Arousal IS veryHigh)) OR ((Valence IS veryLow) AND (Arousal IS medium)) OR ((Valence IS veryLow) AND (Arousal IS high)) THEN ((emotionalState IS unpleasant) AND (emotionalState IS neutral)) "
+R2 = "IF ((Valence IS veryLow) AND (Arousal IS low)) THEN ((emotionalState IS unpleasant)"
+R3 = "IF ((Valence IS veryLow) AND (Arousal IS veryHigh)) OR ((Valence IS veryLow) AND (Arousal IS high)) THEN ((emotionalState IS unpleasant) OR (emotionalState IS neutral)) "
 #Low Valence
-R4 = "IF (Valence IS low) AND (Arousal IS veryLow) THEN ((emotionalState IS unpleasant) OR (emotionalState IS unpleasant))"
+R4 = "IF (Valence IS low) AND (Arousal IS veryLow) THEN ((emotionalState IS unpleasant) OR (emotionalState IS veryUnpleasant))"
 R5 = "IF ((Valence IS low) AND (Arousal IS low)) OR ((Valence IS low) AND (Arousal IS medium)) THEN (emotionalState IS unpleasant) "
-R6 = "IF ((Valence IS low) AND (Arousal IS high)) OR ((Valence IS low) AND (Arousal IS veryHigh)) THEN ((emotionalState IS unpleasant) OR ((emotionalState IS neutral))"
+R6 = "IF ((Valence IS low) AND (Arousal IS high)) OR ((Valence IS low) AND (Arousal IS veryHigh)) THEN ((emotionalState IS unpleasant) AND ((emotionalState IS neutral))"
 
 #Medium Valence
 R7 = "IF ((Valence IS medium) AND (Arousal IS high)) OR ((Valence IS medium) AND (Arousal IS veryHigh)) THEN ((emotionalState IS neutral) OR (emotionalState IS pleasant))"
@@ -57,15 +57,27 @@ R14 = "IF ((Valence IS veryHigh) AND (Arousal IS low)) OR ((Valence IS veryHigh)
 # R14 = "IF ((Valence IS veryHigh) AND (Arousal IS high)) OR ((Valence IS veryHigh) AND (Arousal IS medium)) THEN ((emotionalState IS pleasant) AND (emotionalState IS pleasant))  "
 R15 = "IF ((Valence IS veryHigh) OR (Arousal IS veryHigh)) THEN (emotionalState IS veryPleasant)"
 R16 = "IF ((Valence IS veryHigh) AND (Arousal IS high)) THEN ((emotionalState IS pleasant) NOT (emotionalState IS veryPleasant)) "
-FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16])
+R17 = "IF ((Valence IS high) AND (Arousal IS medium)) THEN (emotionalState IS neutral) "
+R18 = "IF (Valence IS veryLow) OR (Arousal IS medium) THEN (emotionalState IS neutral)"
+
+
+FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18])
 # OR ((Valence IS low) AND (Valence IS medium)) 
 # r8 = ((emotionalState IS unpleasant) OR 
 
-xValence = 7
-yArousal = 12
+xValence = -0.73
+yArousal = -0.8
+
+finalXValence = (xValence + 1) *10
+finalYArousal = (yArousal + 1) *10
+
+# finalXValence = 20
+# finalYArousal = 15
+
+
 # Set antecedents values
-FS.set_variable("Valence",xValence) #enter values between 0 to 20
-FS.set_variable("Arousal",yArousal) #enter values between 0 to 20
+FS.set_variable("Valence",finalXValence) #enter values between 0 to 20
+FS.set_variable("Arousal",finalYArousal) #enter values between 0 to 20
 
 emoState = (FS.Mamdani_inference(["emotionalState"]))
 # print (emoState["emotionalState"])
@@ -73,7 +85,7 @@ emo = float(emoState["emotionalState"])
 
 # print output
 def findEmotionalState():
-    if (xValence < 10 and yArousal > 10) or (xValence > 10 and yArousal < 10):
+    if (finalXValence < 10 and finalYArousal > 10) or (finalXValence > 10 and finalYArousal < 10):
         print(emo * -1)
     else:
         print (emo)
