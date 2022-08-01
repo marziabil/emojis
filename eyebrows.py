@@ -45,16 +45,16 @@ def raisedEyebrowsHigh():
     py5.arc(115, 70, 65, 20, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow  
 
 
-def drawEyebrows(ebType):
-    if ebType == "no_eyebrows":
+def drawEyebrows(emotionalState):
+    if (emotionalState > 18.91 and emotionalState > 25.6 and emotionalState < 28.979 and emotionalState < 36.899) or (emotionalState > -22 and emotionalState < 25.6 )  :
         noEyebrows() #no eyebrows:
-    elif ebType == "straight":
+    elif (emotionalState > 12.46 and emotionalState > 16 and emotionalState < 19.5 and emotionalState < 18.91):
         straightEyebrows() # straight eyebrows
-    elif ebType == "slightly_furrowed":
+    elif (emotionalState > 23.1 and emotionalState > 20.96 and emotionalState < -20 and emotionalState < -28.59) or (emotionalState > 24.4 and emotionalState > -22 and emotionalState < 18.91 and emotionalState < 25.6):
         slightlyFurrowed() 
-    elif ebType == "highly_furrowed":
+    elif (emotionalState > 24.4 and emotionalState > 23.959 and emotionalState < 20.96 and emotionalState <23.01 ):
         highlyFurrowed()
-    elif ebType == "raised_eyebrows":
-        raisedEyebrows()    
+    elif (emotionalState > 25.75 and emotionalState > 27.87 and emotionalState < 28.979 and emotionalState < 29.81):
+        raisedEyebrows() #lower
     else: 
-        raisedEyebrowsHigh()
+        raisedEyebrowsHigh() #higher places
