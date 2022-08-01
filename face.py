@@ -1,5 +1,5 @@
 import py5
-from main import emotionalState
+# from main import getEmotionalState
 
 def makeFace():
     py5.stroke_weight(5)

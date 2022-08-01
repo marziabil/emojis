@@ -17,6 +17,7 @@ yArousal = 0.72 #enter y coordinate here
 
 def getEmotionalState():
     
+    global emotionalState
     emotionalState = findEmotionalState(xValence, yArousal)
     return(emotionalState)
 
@@ -33,7 +34,7 @@ def draw():
 # #     # drawEyebrows(ebType)
 # #     # drawMouth(mouthType)
 
-# py5.run_sketch()
+py5.run_sketch()
 
 
 # faceColour = "yellow"
