@@ -69,11 +69,7 @@ FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R
 # yArousal = 0.8
 
 
-
-# print output
 def findEmotionalState(xValence, yArousal):
-
-
     finalXValence = (xValence + 1) *10
     finalYArousal = (yArousal + 1) *10
 
@@ -99,60 +95,6 @@ def findEmotionalState(xValence, yArousal):
 
 # findEmotionalState()
 
-# FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R20, R21, R22, R23, R24, R25])
-
-# # Perform Mamdani inference and print output
-# def mouth_Type():
-#     return(FS.Mamdani_inference(["mouthType"]))
-
-# # Define output fuzzy sets and linguistic variable for overall emotional state
-# F_1 = FuzzySet(function=Trapezoidal_MF(a=0,b=0,c=7,d=12), term="veryUnpleasant")
-# F_2 = FuzzySet(function=Trapezoidal_MF(a=6,b=13,c=20,d=22), term="unpleasant")
-# F_3 = FuzzySet(function=Trapezoidal_MF(a=18,b=20,c=27,d=34), term="pleasant")
-# F_4 = FuzzySet(function=Trapezoidal_MF(a=28,b=33,c=40,d=40), term="veryPleasant")
-# FS.add_linguistic_variable ("emotionalState", LinguisticVariable([F_1, F_2, F_3, F_4], universe_of_discourse=[0,40]))
-
-# # # Define output fuzzy sets and linguistic variable for overall emotional state
-# F_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0,c=4,d=8), term="veryUnpleasant")
-# F_2 = FuzzySet(function=Trapezoidal_MF(a=2, b=6,c=16,d=24), term="unpleasant")
-# F_3 = FuzzySet(function=Trapezoidal_MF(a=17,b=18,c=22,d=23), term="neutral")
-# F_4 = FuzzySet(function=Trapezoidal_MF(a=16,b=24,c=34,d=38), term="pleasant")
-# F_5 = FuzzySet(function=Trapezoidal_MF(a=32,b=36,c=40,d=40), term="veryHigh")
-# FS.add_linguistic_variable ("emotionalState", LinguisticVariable([F_1, F_2, F_3, F_4, F_5], universe_of_discourse=[0,40]))
-
-
-# R1 = "IF (Valence IS veryLow) OR (Arousal IS veryLow) THEN (emotionalState IS veryUnpleasant)"
-# R2 = "IF (Valence IS veryLow) AND (Arousal IS low) THEN ((emotionalState IS unpleasant) NOT (emotionalState IS neutral))"
-# R3 = "IF (Valence IS veryLow) OR (Arousal IS veryHigh) THEN (emotionalState IS unpleasant)"
-# R4 = "IF (Valence IS veryLow) OR (Arousal IS medium) THEN (emotionalState IS unpleasant)"
-# R5 = "IF (Valence IS veryLow) OR (Arousal IS high) THEN (emotionalState IS unpleasant)"
-# #Low Valence
-# R6 = "IF (Valence IS low) AND (Arousal IS veryLow) THEN ((emotionalState IS veryUnpleasant) NOT (emotionalState IS unpleasant))"
-# R7 = "IF (Valence IS low) AND (Arousal IS low) THEN (emotionalState IS unpleasant) "
-# R8 = "IF (Valence IS low) AND (Arousal IS medium) THEN (emotionalState IS neutral)"
-# R9 = "IF (Valence IS low) AND (Arousal IS high) THEN (emotionalState IS neutral) "
-# R10 = "IF (Valence IS low) AND (Arousal IS veryHigh) THEN (emotionalState IS neutral) "
-
-# #Medium Valence
-# R11 = "IF (Valence IS medium) AND (Arousal IS low) THEN (emotionalState IS unpleasant)"
-# R12 = "IF (Valence IS medium) OR (Arousal IS veryLow) THEN (emotionalState IS unpleasant)"
-# R13 = "IF (Valence IS medium) OR (Arousal IS medium) THEN (emotionalState IS neutral)"
-# R14 = "IF (Valence IS medium) AND (Arousal IS high) THEN ((emotionalState IS pleasant) NOT (emotionalState IS veryPleasant))"
-# R15 = "IF (Valence IS medium) AND (Arousal IS veryHigh) THEN ((emotionalState IS pleasant) NOT (emotionalState IS neutral))"
-
-# #High Valence
-# R16 = "IF (Valence IS high) OR (Arousal IS veryLow) THEN (emotionalState IS neutral)"
-# R17 = "IF (Valence IS high) OR (Arousal IS low) THEN (emotionalState IS pleasant) "
-# R18 = "IF (Valence IS high) AND (Arousal IS medium) THEN (emotionalState IS pleasant)"
-# R19 = "IF (Valence IS high) AND (Arousal IS high) THEN ((emotionalState IS pleasant) NOT (emotionalState IS veryPleasant))"
-# R20 = "IF (Valence IS high) AND (Arousal IS veryHigh) THEN (emotionalState IS veryPleasant)"
-
-# #Very high valence
-# R21 = "IF (Valence IS veryHigh) AND (Arousal IS veryLow) THEN (emotionalState IS neutral)"
-# R22 = "IF (Valence IS veryHigh) AND (Arousal IS low) THEN (emotionalState IS neutral) "
-# R23 = "IF (Valence IS veryHigh) AND (Arousal IS medium) THEN (emotionalState IS neutral) "
-# R24 = "IF (Valence IS veryHigh) AND (Arousal IS high) THEN ((emotionalState IS pleasant) NOT (emotionalState IS neutral))"
-# R25 = "IF (Valence IS veryHigh) AND (Arousal IS veryHigh) THEN ((emotionalState IS veryPleasant) NOT (emotionalState IS pleasant)) "
 
 
 
