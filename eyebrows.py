@@ -3,12 +3,10 @@ import py5
     #no eyebrows
 def noEyebrows(): 
     py5.no_stroke()
-    py5.no_fill()
 
 #straight eyebrows
 def straightEyebrows():
     py5.stroke_weight(5)
-    py5.no_fill()
     py5.stroke(204, 153, 0)
     py5.arc(75, 65, 37.5, 12.5, py5.PI, py5.TWO_PI) #left eyebrow
     py5.arc(125, 65, 37.5, 12.5, py5.PI, py5.TWO_PI) #right eyebrow
@@ -17,7 +15,6 @@ def straightEyebrows():
 def slightlyFurrowed():
     py5.stroke(204, 153, 0)
     py5.stroke_weight(6)
-    py5.no_fill()
     py5.arc(50, 50, 80, 30, 0, py5.HALF_PI) #left eyebrow
     py5.arc(150, 50, 80, 30, py5.HALF_PI, py5.PI) #right eyebrow
 
@@ -32,7 +29,6 @@ def highlyFurrowed():
 def raisedEyebrows():
     py5.stroke(204, 153, 0)
     py5.stroke_weight(6)
-    py5.no_fill()
     py5.arc(160, 80, 220, 20, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
     py5.arc(115, 80, 65, 20, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow
 
@@ -40,7 +36,6 @@ def raisedEyebrows():
 def raisedEyebrowsHigh():
     py5.stroke(204, 153, 0)
     py5.stroke_weight(6)
-    py5.no_fill()
     py5.arc(165, 70, 220, 20, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
     py5.arc(115, 70, 65, 20, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow  
 
@@ -48,13 +43,13 @@ def raisedEyebrowsHigh():
 def drawEyebrows(emotionalState):
     if (emotionalState > 25.6 and emotionalState < 36.899) or (emotionalState < -25.34 and emotionalState > -12.1250158):
         noEyebrows() #no eyebrows:
-    elif (emotionalState > 12.46 and emotionalState < 22.06):
+    elif (emotionalState > 3.1 and emotionalState < 9.42):
         straightEyebrows() # straight eyebrows
-    elif (emotionalState > 23.1 and emotionalState > 20.96 and emotionalState < -20 and emotionalState < -28.59) or (emotionalState > 24.4 and emotionalState > -22 and emotionalState < 18.91 and emotionalState < 25.6):
+    elif (emotionalState > 9.42 and emotionalState < 15.74): 
         slightlyFurrowed() 
-    elif (emotionalState > 24.4 and emotionalState > 23.959 and emotionalState < 20.96 and emotionalState <23.01 ):
+    elif (emotionalState > 15.74 and emotionalState < 22.06):
         highlyFurrowed()
-    elif (emotionalState > 25.75 and emotionalState > 27.87 and emotionalState < 28.979 and emotionalState < 29.81):
+    elif (emotionalState <-25.94 and emotionalState > -29.81):
         raisedEyebrows() #lower
     else: 
         raisedEyebrowsHigh() #higher places

@@ -12,8 +12,8 @@ from fuzzyLogic import findEmotionalState
 
 #module mode
 
-xValence = -0.45 #enter x coordinate here
-yArousal = 0.65 #enter y coordinate here
+xValence = -0.6 #enter x coordinate here
+yArousal = -0.39 #enter y coordinate here
 
 def getEmotionalState():
     
@@ -30,8 +30,9 @@ def setup():
 
 def draw():
     drawFace(emotionalState)
-# #     # drawEyes(eyeType)
     drawEyebrows(emotionalState)
+# #     # drawEyes(eyeType)
+    
 # #     # drawMouth(mouthType)
 
 py5.run_sketch()

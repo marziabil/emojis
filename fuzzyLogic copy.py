@@ -35,10 +35,11 @@ FS.add_linguistic_variable ("emotionalState", LinguisticVariable([F_1, F_2, F_3,
 # Define fuzzy rules.
 #veryLow Valence
 R1 = "IF (Valence IS veryLow) AND (Arousal IS veryLow) THEN ((emotionalState IS veryUnpleasant) NOT (emotionalState IS unpleasant))"
-R2 = "IF ((Valence IS veryLow) AND (Arousal IS low)) THEN ((emotionalState IS unpleasant)"
+R2 = "IF ((Valence IS veryLow) AND (Arousal IS low)) THEN (emotionalState IS unpleasant)"
 R3 = "IF ((Valence IS veryLow) AND (Arousal IS veryHigh)) OR ((Valence IS veryLow) AND (Arousal IS high)) THEN ((emotionalState IS unpleasant) OR (emotionalState IS neutral)) "
+R18 = "IF (Valence IS veryLow) OR (Arousal IS medium) THEN ((emotionalState IS neutral) AND (emotionalState IS unpleasant)) "
 #Low Valence
-R4 = "IF (Valence IS low) AND (Arousal IS veryLow) THEN ((emotionalState IS unpleasant) OR (emotionalState IS veryUnpleasant))"
+R4 = "IF (Valence IS low) AND (Arousal IS veryLow) THEN ((emotionalState IS unpleasant) AND (emotionalState IS veryUnpleasant))"
 R5 = "IF ((Valence IS low) AND (Arousal IS low)) OR ((Valence IS low) AND (Arousal IS medium)) THEN (emotionalState IS unpleasant) "
 R6 = "IF ((Valence IS low) AND (Arousal IS high)) OR ((Valence IS low) AND (Arousal IS veryHigh)) THEN ((emotionalState IS unpleasant) AND ((emotionalState IS neutral))"
 
@@ -58,7 +59,7 @@ R14 = "IF ((Valence IS veryHigh) AND (Arousal IS low)) OR ((Valence IS veryHigh)
 R15 = "IF ((Valence IS veryHigh) OR (Arousal IS veryHigh)) THEN (emotionalState IS veryPleasant)"
 R16 = "IF ((Valence IS veryHigh) AND (Arousal IS high)) THEN ((emotionalState IS pleasant) NOT (emotionalState IS veryPleasant)) "
 R17 = "IF ((Valence IS high) AND (Arousal IS medium)) THEN (emotionalState IS neutral) "
-R18 = "IF (Valence IS veryLow) OR (Arousal IS medium) THEN (emotionalState IS neutral)"
+
 
 
 FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18])
@@ -68,8 +69,8 @@ FS.add_rules([R1,R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R
 # xValence = -0.5
 # yArousal = -0.5
 
-finalXValence = 9.9
-finalYArousal = 9.9
+finalXValence = 0
+finalYArousal = 20
 
     # finalXValence = 5
     # finalYArousal = 20
