@@ -12,8 +12,8 @@ from fuzzyLogic import findEmotionalState
 
 #module mode
 
-xValence = -0.6 #enter x coordinate here
-yArousal = -0.39 #enter y coordinate here
+xValence = 0 #enter x coordinate here
+yArousal = -0.6 #enter y coordinate here
 
 def getEmotionalState():
     

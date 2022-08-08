@@ -39,20 +39,35 @@ def raisedEyebrowsHigh():
     py5.arc(165, 70, 220, 20, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
     py5.arc(115, 70, 65, 20, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow  
 
-
 def drawEyebrows(emotionalState):
-    if (emotionalState > 25.6 and emotionalState < 36.899) or (emotionalState < -25.34 and emotionalState > -12.1250158):
+    if (emotionalState > 25.6 and emotionalState < 36.899) or (emotionalState > -25.34 and emotionalState < -12.1250158):
         noEyebrows() #no eyebrows:
-    elif (emotionalState > 3.1 and emotionalState < 9.42):
+    elif (emotionalState > 16 and emotionalState < 21):
         straightEyebrows() # straight eyebrows
-    elif (emotionalState > 9.42 and emotionalState < 15.74): 
+    elif (emotionalState > 21 and emotionalState < 22.07): 
         slightlyFurrowed() 
-    elif (emotionalState > 15.74 and emotionalState < 22.06):
+    elif (emotionalState < -22.06 and emotionalState > -25.34):
         highlyFurrowed()
-    elif (emotionalState <-25.94 and emotionalState > -29.81):
+    elif (emotionalState <-22 and emotionalState > -29):
         raisedEyebrows() #lower
     else: 
-        raisedEyebrowsHigh() #higher places
+        raisedEyebrowsHigh() #higher placed
+
+
+
+# def drawEyebrows(emotionalState):
+#     if (emotionalState > 25.6 and emotionalState < 36.899) or (emotionalState > -25.34 and emotionalState < -12.1250158):
+#         noEyebrows() #no eyebrows:
+#     elif (emotionalState > 3.1 and emotionalState < 9.42):
+#         straightEyebrows() # straight eyebrows
+#     elif (emotionalState > 9.42 and emotionalState < 15.74): 
+#         slightlyFurrowed() 
+#     elif (emotionalState > 15.74 and emotionalState < 22.06):
+#         highlyFurrowed()
+#     elif (emotionalState <-25.94 and emotionalState > -29.81):
+#         raisedEyebrows() #lower
+#     else: 
+#         raisedEyebrowsHigh() #higher places
 
 # def drawEyebrows(emotionalState):
 #     if (emotionalState > 25.6 and emotionalState < 36.899) or (emotionalState < -25.34 and emotionalState > -12.1250158):
