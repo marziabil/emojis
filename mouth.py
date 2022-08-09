@@ -22,7 +22,7 @@ def crumpledMouth():
 
 def frowningMouth():
     py5.stroke_weight(6)
-    py5.no_fill()
+    # py5.no_fill()
     py5.arc(100, 140, 70, 40, py5.PI, py5.TWO_PI) 
 
 def openMouth():
@@ -32,12 +32,10 @@ def openMouth():
 
 def smilingMouth():
     py5.stroke_weight(6)
-    py5.no_fill()
     py5.arc(py5.width * 0.5, py5.height * 0.67, 80, 37, 0, py5.radians(180))
 
 def shortStraight():
     py5.stroke_weight(6)
-    py5.no_fill()
     py5.line(80, 140, 120, 140)
 
 def happyMouth():
@@ -56,7 +54,6 @@ def happyMouth():
 
 def smileHigh():
     py5.stroke_weight(6)
-    py5.no_fill()
     py5.arc(py5.width * 0.5, py5.height * 0.6, 80, 37, 0, py5.radians(180))
 
 def clenchedTeeth():
@@ -75,22 +72,33 @@ def longStraight():
     py5.stroke_weight(5)
     py5.line(65, 130, 135, 130)
 
-def drawMouth(mouthType):
-    if mouthType == "crumpled":
+def frowningOpen():
+    py5.stroke_weight(6)
+    py5.fill(0)
+    py5.arc(py5.width * 0.5, py5.height * 0.72, 80, 55, py5.PI, py5.TWO_PI, py5.CHORD)
+    #teeth
+    py5.stroke(255)
+    py5.fill(255)
+    py5.arc(py5.width * 0.5, 122, 40,6, py5.PI, py5.TWO_PI, py5.CHORD)
+
+def drawMouth(emotionalState):
+    if (emotionalState > 22 and emotionalState < 24):
         crumpledMouth()
-    elif mouthType == "frowning":
+    elif (emotionalState > 19 and emotionalState < 24.5) or (emotionalState < -12 and emotionalState > -25):
         frowningMouth()
-    elif mouthType == "open":
+    elif (emotionalState < 17 and emotionalState > 13):
         openMouth()
-    elif mouthType == "smile":   
+    elif (emotionalState < -27 and emotionalState < -30):   
         smilingMouth()
-    elif mouthType == "shortStraight": 
+    elif (emotionalState > 10 and emotionalState < 13): 
         shortStraight()
-    elif mouthType == "happy":
+    elif (emotionalState > 29 and emotionalState < 36):
         happyMouth()
-    elif mouthType == "smileHigh":
+    elif (emotionalState > 24 and emotionalState < 29):
         smileHigh()
-    elif mouthType == "clenched":
+    elif (emotionalState < -22 and emotionalState > 25):
         clenchedTeeth()
+    elif (emotionalState > 17 and emotionalState < 19):
+        frowningOpen()
     else: 
         longStraight()

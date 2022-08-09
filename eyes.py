@@ -25,7 +25,6 @@ def xShaped():
 def ovalEyes():
     py5.stroke_weight(10)
     py5.stroke(0) #color black
-    py5.fill(0)
     py5.ellipse(75,90,5,12) #left eye
     py5.ellipse(125,90,5,12) #right eye
 
@@ -84,7 +83,7 @@ def whiteEyes():
 def drawEyes(emotionalState):  
     if (emotionalState > 22 and emotionalState < 24):
         xShaped()  
-    elif (emotionalState > 12 and emotionalState < 22):
+    elif (emotionalState > 12 and emotionalState < 22) or (emotionalState < -22.06 and emotionalState > -25.34):
         ovalEyes()  
     elif (emotionalState <-22 and emotionalState > -29):
         shallowDowncast()
@@ -92,7 +91,7 @@ def drawEyes(emotionalState):
         deepDowncast()
     elif (emotionalState < 29 and emotionalState > 22):
         smilingEyes()
-    elif eyeType == "straightEyes":
+    elif (emotionalState < 29 and emotionalState > 22):
         straightEyes()
     elif (emotionalState < 37 and emotionalState > 29): 
         wideOpenEyes()    
