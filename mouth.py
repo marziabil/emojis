@@ -22,15 +22,13 @@ def crumpledMouth():
 
 def frowningMouth():
     py5.stroke_weight(6)
-    # py5.no_fill()
     py5.arc(100, 140, 70, 40, py5.PI, py5.TWO_PI) 
 
 def openMouth():
     py5.stroke_weight(6)
     py5.fill(0)
-    py5.arc(100, 150, 70, 50, py5.PI, py5.TWO_PI, py5.CHORD)
-    
-
+    py5.arc(100, 150, 70, 50, py5.PI, py5.TWO_PI)
+   
 def smilingMouth():
     py5.stroke_weight(6)
     py5.arc(py5.width * 0.5, py5.height * 0.67, 80, 37, 0, py5.radians(180))
@@ -95,11 +93,11 @@ def drawMouth(emotionalState):
         shortStraight()
     elif (emotionalState > 29 and emotionalState < 36):
         happyMouth()
-    elif (emotionalState > 24 and emotionalState < 29):
+    elif (emotionalState > 26 and emotionalState < 29):
         smileHigh()
     elif (emotionalState < -22 and emotionalState > 25):
         clenchedTeeth()
-    elif (emotionalState > 17 and emotionalState < 19):
+    elif (emotionalState > 17 and emotionalState < 26):
         frowningOpen()
     else: 
         longStraight()
