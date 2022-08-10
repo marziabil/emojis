@@ -29,6 +29,7 @@ def openMouth():
     py5.stroke_weight(6)
     py5.fill(0)
     py5.arc(100, 150, 70, 50, py5.PI, py5.TWO_PI, py5.CHORD)
+    
 
 def smilingMouth():
     py5.stroke_weight(6)
