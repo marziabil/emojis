@@ -8,7 +8,7 @@ Emoji, literally meaning ‘picture-word’ in Japanese, are increasingly being 
 Human emotions are largely subjective and different individuals may react differently to the same stimulus (Fellous, 2007). There are several computational and cognitive models of emotions which stem from multidisciplinary research on the subject such as Ekman’s model of six basic emotions, Wang’s hierarchical model of emotions, the appraisal theory of emotions and Russel’s circumplex model. 
 Russel's circumplex model will be used here which comprises two affective dimensions of *arousal* and *valence*. Arousal is the level of energy while valence is the type of experiences such as displeasure and pleasure. The image below shows the two-dimensional circumplex space model which was further adapted by Scherer. I mapped existing emojis onto this model using Emojipedia (https://emojipedia.org/), an emoji reference website. 
 
-![image](https://user-images.githubusercontent.com/94219257/179777215-9f9e4f0c-4d39-4e00-a7d1-102b59740fd7.png)
+![Scherer model with emojis](https://user-images.githubusercontent.com/94219257/184111321-9236bcff-b2a3-45fe-afff-55fa488f12dd.jpg)
 
 
 #### 2. Features
