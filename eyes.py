@@ -85,7 +85,7 @@ def drawEyes(emotionalState):
         ovalEyes()  
     elif (emotionalState > 24 and emotionalState <  26):
         shallowDowncast()
-    elif (emotionalState <-20 and emotionalState > -29):
+    elif (emotionalState <-20 and emotionalState > -28):
         deepDowncast()
     elif (emotionalState > 26 and emotionalState < 29):
         smilingEyes()

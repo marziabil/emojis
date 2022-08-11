@@ -55,7 +55,7 @@ R14 = "IF ((Valence IS veryHigh) AND (Arousal IS low)) OR ((Valence IS veryHigh)
 # R14 = "IF ((Valence IS veryHigh) AND (Arousal IS high)) OR ((Valence IS veryHigh) AND (Arousal IS medium)) THEN ((emotionalState IS pleasant) AND (emotionalState IS pleasant))  "
 R15 = "IF ((Valence IS veryHigh) OR (Arousal IS veryHigh)) THEN (emotionalState IS veryPleasant)"
 R16 = "IF ((Valence IS veryHigh) AND (Arousal IS high)) THEN ((emotionalState IS pleasant) NOT (emotionalState IS veryPleasant)) "
-R17 = "IF ((Valence IS high) AND (Arousal IS medium)) THEN (emotionalState IS neutral) "
+R17 = "IF ((Valence IS high) AND (Arousal IS medium)) THEN (emotionalState IS pleasant) "
 
 
 

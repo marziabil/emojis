@@ -11,8 +11,8 @@ from mouth import drawMouth
 from extraFeature import drawFeature
 from fuzzyLogic import findEmotionalState
 
-xValence = 0.45 #enter x coordinate here
-yArousal = 0.65 #enter y coordinate here
+xValence = 0.39 #enter x coordinate here
+yArousal = -0.18 #enter y coordinate here
 
 if xValence > 1 or xValence < -1:
      raise Exception("Error: Enter xValence values between 1 and -1")

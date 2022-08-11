@@ -1,5 +1,3 @@
-from math import radians
-from turtle import width
 import py5
 
 def noFeature():
@@ -8,15 +6,15 @@ def noFeature():
 def flushedCheeks():
     py5.no_stroke()
     py5.fill(247,137,74)
-    py5.ellipse(60, 110, 22, 22) #left cheek
-    py5.ellipse(140, 110, 22, 22 ) #right cheek
+    py5.ellipse(60, 110, 25, 25) #left cheek
+    py5.ellipse(140, 110, 25, 25 ) #right cheek
     py5.no_fill()
 
 def darkFlushedCheeks():
     py5.no_stroke()
     py5.fill(172, 11, 25)
-    py5.ellipse(60, 110, 22, 22) #left cheek
-    py5.ellipse(140, 110, 22, 22 ) #right cheek
+    py5.ellipse(65, 110, 25,25) #left cheek
+    py5.ellipse(135, 110, 25,25) #right cheek
     py5.no_fill()
 
 def tearDrop():
@@ -33,7 +31,7 @@ def drawFeature(emotionalState):
         flushedCheeks()
     elif (emotionalState > 16 and emotionalState < 24):
         tearDrop()
-    elif (emotionalState <-21 and emotionalState >-23):
+    elif (emotionalState <-20 and emotionalState >-23):
         darkFlushedCheeks()
     else: 
         noFeature()
