@@ -25,9 +25,9 @@ def frowningMouth():
     py5.arc(100, 140, 70, 40, py5.PI, py5.TWO_PI) 
 
 def openMouth():
-    py5.stroke_weight(6)
     py5.fill(0)
-    py5.arc(100, 150, 70, 50, py5.PI, py5.TWO_PI)
+    py5.arc(100, 150, 50, 40, py5.PI, py5.TWO_PI, py5.CHORD)
+    py5.no_fill()
    
 def smilingMouth():
     py5.stroke_weight(6)
@@ -52,8 +52,9 @@ def happyMouth():
     py5.arc(py5.width * 0.5, py5.height * 0.80, 23, 15, py5.PI, py5.TWO_PI, py5.CHORD)
 
 def smileHigh():
-    py5.stroke_weight(6)
-    py5.arc(py5.width * 0.5, py5.height * 0.6, 80, 37, 0, py5.radians(180))
+    py5.stroke_weight(5)
+    py5.no_fill()
+    py5.arc(py5.width * 0.5, py5.height * 0.6, 80, 37, 0, py5.radians(180), py5.OPEN)   
 
 def clenchedTeeth():
     py5.stroke(0)
@@ -80,6 +81,15 @@ def frowningOpen():
     py5.fill(255)
     py5.arc(py5.width * 0.5, 122, 40,6, py5.PI, py5.TWO_PI, py5.CHORD)
 
+def openShocked():
+    py5.fill(0)
+    py5.ellipse(py5.width * 0.5, py5.height * 0.7, 30, 37)
+    # py5.no_fill()
+    #teeth
+    py5.stroke(255)
+    py5.fill(255)
+    py5.arc(py5.width * 0.5, 125, 10,2, py5.PI, py5.TWO_PI, py5.CHORD)
+    
 def drawMouth(emotionalState):
     if (emotionalState > 22 and emotionalState < 24):
         crumpledMouth()
@@ -91,9 +101,12 @@ def drawMouth(emotionalState):
         smilingMouth()
     elif (emotionalState > 10 and emotionalState < 13): 
         shortStraight()
-    elif (emotionalState > 29 and emotionalState < 36):
+    elif (emotionalState > 30 and emotionalState < 36):
         happyMouth()
-    elif (emotionalState > 26 and emotionalState < 29):
+    elif (emotionalState > 29.6 and emotionalState < 30):
+        openShocked()
+        
+    elif (emotionalState > 26 and emotionalState < 29.6):
         smileHigh()
     elif (emotionalState < -22 and emotionalState > 25):
         clenchedTeeth()
@@ -101,3 +114,27 @@ def drawMouth(emotionalState):
         frowningOpen()
     else: 
         longStraight()
+
+# def drawMouth(emotionalState):
+#     if (emotionalState > 22 and emotionalState < 24):
+#         crumpledMouth()
+#     elif (emotionalState > 19 and emotionalState < 24.5) or (emotionalState < -12 and emotionalState > -25):
+#         frowningMouth()
+#     elif (emotionalState < 17 and emotionalState > 13):
+#         openMouth()
+#     elif (emotionalState < -27 and emotionalState < -30):   
+#         smilingMouth()
+#     elif (emotionalState > 10 and emotionalState < 13): 
+#         shortStraight()
+#     elif (emotionalState > 30 and emotionalState < 36):
+#         happyMouth()
+#     elif (emotionalState > 29 and emotionalState < 30):
+#         openShocked()
+#     elif (emotionalState > 26 and emotionalState < 29):
+#         smileHigh()
+#     elif (emotionalState < -22 and emotionalState > 25):
+#         clenchedTeeth()
+#     elif (emotionalState > 17 and emotionalState < 26):
+#         frowningOpen()
+#     else: 
+#         longStraight()

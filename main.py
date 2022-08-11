@@ -9,8 +9,8 @@ from eyes import drawEyes
 from mouth import drawMouth
 from fuzzyLogic import findEmotionalState
 
-xValence = -0.68 #enter x coordinate here
-yArousal = -0.38 #enter y coordinate here
+xValence = 0.49 #enter x coordinate here
+yArousal = -0.48 #enter y coordinate here
 
 if xValence > 1 or xValence < -1:
      raise Exception("Error: Enter xValence values between 1 and -1")
@@ -28,7 +28,7 @@ print (emotionalState)
 
 def setup():
     py5.size(200,200)
-    py5.background(255)   
+    # py5.background(255)   
 
 def draw():
     drawFace(emotionalState)

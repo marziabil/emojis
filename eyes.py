@@ -72,9 +72,10 @@ def wideOpenEyes():
 def whiteEyes():
     py5.stroke_weight(2)
     py5.stroke(0) #color black
-    py5.ellipse(75,90,25,32) #left eye
     py5.fill(255)
+    py5.ellipse(75,90,25,32) #left eye
     py5.ellipse(125,90,25,32) #right eye
+    py5.no_fill()
     
 
 def drawEyes(emotionalState):  
