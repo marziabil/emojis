@@ -3,7 +3,6 @@ import py5
     #no eyebrows
 def noEyebrows(): 
     py5.no_stroke()
-    print("high")
 
 #straight eyebrows
 def straightEyebrows():
@@ -29,7 +28,7 @@ def highlyFurrowedOrange():
 #highly furrowed black
 def highlyFurrowedBlack():
     py5.stroke(0) #color of eyebrow - black
-    # py5.stroke_weight(6) 
+    py5.stroke_weight(6) 
     py5.line(60, 65, 85, 40) #left eyebrow
     py5.line(115, 40, 140, 65) #right eyebrow 
     
@@ -51,14 +50,18 @@ def raisedEyebrowsHigh():
 def drawEyebrows(emotionalState):
     if (emotionalState > 25.6 and emotionalState < 29 and emotionalState > 30 and emotionalState < 36.899):
         noEyebrows() #no eyebrows
+        
     elif (emotionalState > 16 and emotionalState < 21):
         straightEyebrows() # straight eyebrows
+        
     elif (emotionalState > 21 and emotionalState < 22.07) or (emotionalState > 29 and emotionalState < 30): 
         slightlyFurrowed() 
+        
     elif (emotionalState < -23 and emotionalState > -25):
         highlyFurrowedOrange()
+        
     elif (emotionalState < -20 and emotionalState > -23):
-        highlyFurrowedBlack
+        highlyFurrowedBlack()
     elif (emotionalState <-25 and emotionalState > -29):
         raisedEyebrowsLow() #lower
     else: 

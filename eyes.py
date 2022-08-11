@@ -55,19 +55,19 @@ def straightEyes():
 def wideOpenEyes():
     py5.stroke_weight(10)
     py5.stroke(255) #color white
-    py5.ellipse(75,90,17.5,17.5) #left eye
+    py5.ellipse(75,90,25,25) #left eye
     py5.fill(255) #color white
     py5.stroke(0) #color black
     py5.fill(0)
-    py5.ellipse(75,90,5,5) #left eye
+    py5.ellipse(75,90,8,8) #left eye
 
     py5.stroke_weight(10)
     py5.stroke(255) #color white
-    py5.ellipse(125,90,17.5,17.5) #right eye
+    py5.ellipse(125,90,25,25) #right eye
     py5.fill(255) #color white
     py5.stroke(0) #color black
     py5.fill(0)
-    py5.ellipse(125,90,5,5) #left eye
+    py5.ellipse(125,90,8,8) #left eye
 
 def whiteEyes():
     py5.stroke_weight(2)
@@ -79,11 +79,11 @@ def whiteEyes():
     
 
 def drawEyes(emotionalState):  
-    if (emotionalState > 22 and emotionalState < 24):
+    if (emotionalState > 22 and emotionalState < 23):
         xShaped()  
-    elif (emotionalState > 12 and emotionalState < 22) or (emotionalState < -21 and emotionalState > -25.34):
+    elif (emotionalState > 13 and emotionalState < 17) or (emotionalState < -21 and emotionalState > -25.34) or (emotionalState > 23 and emotionalState < 24):
         ovalEyes()  
-    elif (emotionalState > 22 and emotionalState <  26):
+    elif (emotionalState > 24 and emotionalState <  26):
         shallowDowncast()
     elif (emotionalState <-20 and emotionalState > -29):
         deepDowncast()
@@ -91,7 +91,7 @@ def drawEyes(emotionalState):
         smilingEyes()
     elif (emotionalState < -12 and emotionalState > -21):
         straightEyes()
-    elif (emotionalState < 37 and emotionalState > 29): 
+    elif (emotionalState < 37 and emotionalState > 29) or (emotionalState > 12 and emotionalState < 13): 
         wideOpenEyes()    
     else: 
         whiteEyes()

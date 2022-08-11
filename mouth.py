@@ -2,27 +2,27 @@ import py5
 
 def crumpledMouth():
     py5.stroke(0)
-    py5.stroke_weight(8)
+    py5.stroke_weight(6)
     py5.line(60, 135, 70, 145)
     py5.stroke(0)
-    py5.stroke_weight(8)
+    py5.stroke_weight(6)
     py5.line(70, 145, 85, 130 )
     py5.stroke(0)
-    py5.stroke_weight(8)
+    py5.stroke_weight(6)
     py5.line(85, 130, 100, 145 )
     py5.stroke(0)
-    py5.stroke_weight(8)
+    py5.stroke_weight(6)
     py5.line(100, 145, 115, 130 )
     py5.stroke(0)
-    py5.stroke_weight(8)
+    py5.stroke_weight(6)
     py5.line(115, 130, 130, 145 )
     py5.stroke(0)
-    py5.stroke_weight(8)
+    py5.stroke_weight(6)
     py5.line(130, 145, 140, 135 )
 
 def frowningMouth():
     py5.stroke_weight(6)
-    py5.arc(100, 140, 70, 40, py5.PI, py5.TWO_PI) 
+    py5.arc(100, 142, 65, 40, py5.PI, py5.TWO_PI) 
 
 def openMouth():
     py5.fill(0)
@@ -91,7 +91,7 @@ def openShocked():
     py5.arc(py5.width * 0.5, 125, 10,2, py5.PI, py5.TWO_PI, py5.CHORD)
     
 def drawMouth(emotionalState):
-    if (emotionalState > 22 and emotionalState < 24):
+    if (emotionalState > 22 and emotionalState < 23):
         crumpledMouth()
     elif (emotionalState > 19 and emotionalState < 24.5) or (emotionalState < -12 and emotionalState > -25):
         frowningMouth()
