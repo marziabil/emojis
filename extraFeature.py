@@ -31,7 +31,7 @@ def drawFeature(emotionalState):
         flushedCheeks()
     elif (emotionalState > 16 and emotionalState < 24):
         tearDrop()
-    elif (emotionalState <-20 and emotionalState >-23):
+    elif (emotionalState <-21 and emotionalState >-23):
         darkFlushedCheeks()
     else: 
         noFeature()

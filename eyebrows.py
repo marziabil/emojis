@@ -61,7 +61,7 @@ def drawEyebrows(emotionalState):
     elif (emotionalState < -23 and emotionalState > -25):
         highlyFurrowedOrange()
         
-    elif (emotionalState < -20 and emotionalState > -23):
+    elif (emotionalState < -21 and emotionalState > -23):
         highlyFurrowedBlack()
     elif (emotionalState <-25 and emotionalState > -29):
         raisedEyebrowsLow() #lower

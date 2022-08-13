@@ -7,7 +7,7 @@ def makeFace():
     py5.no_fill()
     
 def drawFace(emotionalState):
-    if (emotionalState <-20 and emotionalState >-23):
+    if (emotionalState <-21 and emotionalState >-23):
         py5.fill(240, 58, 23) #red face
         makeFace()
 

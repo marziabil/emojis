@@ -97,7 +97,7 @@ def drawMouth(emotionalState):
         frowningMouth()
     elif (emotionalState < 17 and emotionalState > 13):
         openMouth()
-    elif (emotionalState < -27 and emotionalState < -30):   
+    elif (emotionalState < -27 and emotionalState > -30):   
         smilingMouth()
     elif (emotionalState > 10 and emotionalState < 13): 
         shortStraight()
@@ -107,7 +107,7 @@ def drawMouth(emotionalState):
         openShocked()
     elif (emotionalState > 26 and emotionalState < 29.6):
         smileHigh()
-    elif (emotionalState < -22 and emotionalState > 25):
+    elif (emotionalState < -22 and emotionalState > -23):
         clenchedTeeth()
     elif (emotionalState > 17 and emotionalState < 26):
         frowningOpen()

@@ -10,10 +10,10 @@ from eyes import drawEyes
 from mouth import drawMouth
 from extraFeature import drawFeature
 from fuzzyLogic import findEmotionalState
-from gui import getArousal, getValence
+# from gui import getArousal, getValence
 
-xValence = -0.2 #enter x coordinate here
-yArousal = 0.9 #enter y coordinate here
+xValence = 0.39 #enter x coordinate here
+yArousal = -0.68 #enter y coordinate here
 
 # xValence = getValence #enter x coordinate here
 # yArousal = getArousal #enter y coordinate here
@@ -33,7 +33,7 @@ print (emotionalState)
 
 def setup():
     py5.size(200,200)
-    # py5.background(255)   
+    py5.background(255)   
 
 def draw():
     drawFace(emotionalState)

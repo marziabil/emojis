@@ -81,7 +81,7 @@ def whiteEyes():
 def drawEyes(emotionalState):  
     if (emotionalState > 22 and emotionalState < 23):
         xShaped()  
-    elif (emotionalState > 13 and emotionalState < 17) or (emotionalState < -21 and emotionalState > -25.34) or (emotionalState > 23 and emotionalState < 24):
+    elif (emotionalState > 13 and emotionalState < 17) or (emotionalState < -21 and emotionalState > -25.34) or (emotionalState > 23 and emotionalState < 24) or (emotionalState < -28 and emotionalState > -30):
         ovalEyes()  
     elif (emotionalState > 24 and emotionalState <  26):
         shallowDowncast()
