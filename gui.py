@@ -48,16 +48,9 @@ emotionArousal = {"Adventurous": 0.91, "Afraid": 0.79, "Alarmed": 0.89, "Ambitio
 #Dropdown box to select emotion
 #Valence
 emotion = StringVar()
-dropdownBox = Combobox(window, values=list(emotionValence.keys()), justify="center", textvariable=StringVar)
-dropdownBox.current(0) #set the selected item
+dropdownBox = Combobox(window, values=list(emotionValence.keys()), justify="center", textvariable=emotion, state="readonly")
+# dropdownBox.current(0) #set the selected item
 dropdownBox.grid(column=0, row=9)
-
-def getValue():
-  valence = emotion.get()
-  # valenceVal = emotionValence[valence]
-  print(valence)
-
-getValue()
 
 #click label which shows text after submit button is selected
 clickLabel = Label(window,font=("Calibri", 14), bg="white" )
@@ -69,7 +62,15 @@ def buttonClicked():
 submitButton = Button(window, text="SUBMIT", bg="#cccccc", font=("Calibri", 15), fg="#1f1f2e", command=buttonClicked, padx=50,height=1, width=1)
 submitButton.grid(column=0, row=11)
 
-
+def getValue():
+  global emotionWord
+  emotionWord = emotion.get()
+  global valenceVal
+  valenceVal = emotionValence[emotionWord]
+  global arousalVal
+  arousalVal = emotionArousal[emotionWord]
+  return(valenceVal, arousalVal)
+  # print(valenceVal, arousalVal)
 
 window.mainloop() #opens window till its closed
-
+getValue()
