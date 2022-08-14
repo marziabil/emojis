@@ -12,8 +12,8 @@ from extraFeature import drawFeature
 from fuzzyLogic import findEmotionalState
 # from gui import getArousal, getValence
 
-xValence = 0.39 #enter x coordinate here
-yArousal = -0.68 #enter y coordinate here
+xValence = -0.18 #enter x coordinate here
+yArousal = 0.72 #enter y coordinate here
 
 # xValence = getValence #enter x coordinate here
 # yArousal = getArousal #enter y coordinate here

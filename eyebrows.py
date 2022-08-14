@@ -30,8 +30,8 @@ def highlyFurrowedOrange():
 def highlyFurrowedBlack():
     py5.stroke(0) #color of eyebrow - black
     py5.stroke_weight(6) 
-    py5.line(60, 65, 85, 40) #left eyebrow
-    py5.line(115, 40, 140, 65) #right eyebrow 
+    py5.line(60, 50, 85, 75) #left eyebrow
+    py5.line(115, 75, 140, 50) #right eyebrow 
     
 
 #raised eyebrows (lower positioned)
