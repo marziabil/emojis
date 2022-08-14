@@ -12,8 +12,15 @@ from extraFeature import drawFeature
 from fuzzyLogic import findEmotionalState
 # from gui import getArousal, getValence
 
-xValence = -0.18 #enter x coordinate here
-yArousal = 0.72 #enter y coordinate here
+xValence = -0.6 #enter x coordinate here
+yArousal = -0.18 #enter y coordinate here
+
+def getWeightValue():
+    global weight
+    weight = yArousal + 1
+    return(weight)
+
+getWeightValue()
 
 # xValence = getValence #enter x coordinate here
 # yArousal = getArousal #enter y coordinate here
@@ -39,7 +46,7 @@ def draw():
     drawFace(emotionalState)
     drawEyebrows(emotionalState)
     drawFeature(emotionalState)
-    drawEyes(emotionalState)
+    drawEyes(emotionalState, weight)
     drawMouth(emotionalState)   
     
 py5.run_sketch()
