@@ -23,17 +23,17 @@ def slightlyFurrowed(weight):
 #highly furrowed orange
 def highlyFurrowedOrange(weight):
     py5.stroke(204, 153, 0) #color of eyebrow - orange
-    py5.stroke_weight(6) 
-    py5.line(60, 65*weight, 85, 40*weight) #left eyebrow
-    py5.line(115, 40*weight, 140, 65*weight) #right eyebrow 
+    py5.stroke_weight(6*weight) 
+    py5.line(60, 65+weight, 85, 40+weight) #left eyebrow
+    py5.line(115, 40+weight, 140, 65+weight) #right eyebrow 
     
 
 #highly furrowed black
 def highlyFurrowedBlack(weight):
     py5.stroke(0) #color of eyebrow - black
     py5.stroke_weight(6*weight) 
-    py5.line(60, 50, 85, 75) #left eyebrow
-    py5.line(115, 75, 140, 50) #right eyebrow 
+    py5.line(60, 50+weight, 85, 75+weight) #left eyebrow
+    py5.line(115, 75+weight, 140, 50+weight) #right eyebrow 
     
 
 #raised eyebrows (lower positioned)

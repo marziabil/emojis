@@ -6,15 +6,15 @@ def noFeature():
 def flushedCheeks(weight):
     py5.no_stroke()
     py5.fill(247,137,74)
-    py5.ellipse(60, 110, 25*weight, 25*weight) #left cheek
-    py5.ellipse(140, 110, 25*weight, 25*weight) #right cheek
+    py5.ellipse(60, 110, 25+weight, 25+weight) #left cheek
+    py5.ellipse(140, 110, 25+weight, 25+weight) #right cheek
     py5.no_fill()
 
 def darkFlushedCheeks(weight):
     py5.no_stroke()
     py5.fill(172, 11, 25)
-    py5.ellipse(65, 110, 25*weight,25*weight) #left cheek
-    py5.ellipse(135, 110, 25*weight,25*weight) #right cheek
+    py5.ellipse(65, 110, 25+weight,25+weight) #left cheek
+    py5.ellipse(135, 110, 25+weight,25+weight) #right cheek
     py5.no_fill()
 
 def tearDrop():
