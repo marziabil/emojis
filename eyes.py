@@ -26,8 +26,8 @@ def ovalEyes(weight):
     # py5.stroke_weight(10)
     py5.no_stroke()
     py5.fill(0) #color black
-    py5.ellipse(75,90,5 * weight,12*weight) #left eye
-    py5.ellipse(125,90,5 * weight,12*weight) #right eye
+    py5.ellipse(75,90,5*weight,12) #left eye
+    py5.ellipse(125,90,5*weight,12) #right eye
     py5.no_fill()
 
 def shallowDowncast(weight):
@@ -44,9 +44,9 @@ def deepDowncast(weight):
 
 def smilingEyes(weight):
     py5.stroke(0)
-    py5.stroke_weight(6)
-    py5.arc(75, 95, 37.5 * weight, 20 * weight, py5.PI, py5.TWO_PI) #left eye
-    py5.arc(125, 95, 37.5 * weight, 20 * weight, py5.PI, py5.TWO_PI) #right eye 
+    py5.stroke_weight(6*weight)
+    py5.arc(75, 95, 37.5, 20 , py5.PI, py5.TWO_PI) #left eye
+    py5.arc(125, 95, 37.5, 20, py5.PI, py5.TWO_PI) #right eye 
 
 def straightEyes(weight):
     py5.stroke(0)
@@ -57,19 +57,20 @@ def straightEyes(weight):
 def wideOpenEyes(weight):
     py5.stroke_weight(10)
     py5.stroke(255) #color white
-    py5.ellipse(75,90,25 * weight,25 * weight) #left eye
+    py5.ellipse(75,90,25 + weight,25 + weight) #left eye
     py5.fill(255) #color white
     py5.stroke(0) #color black
     py5.fill(0)
-    py5.ellipse(75,90,8 * weight,8 * weight) #left eye
+    py5.ellipse(75,90,8 + weight,8 + weight) #left eye
 
     py5.stroke_weight(10)
     py5.stroke(255) #color white
-    py5.ellipse(125,90,25 * weight,25 * weight) #right eye
+    py5.ellipse(125,90,25 + weight,25 + weight) #right eye
     py5.fill(255) #color white
     py5.stroke(0) #color black
     py5.fill(0)
-    py5.ellipse(125,90,8 * weight,8 * weight) #left eye
+    py5.ellipse(125,90,8 + weight,8 + weight) #left eye
+    py5.no_fill()
 
 def whiteEyes(weight):
     py5.stroke_weight(2)

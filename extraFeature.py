@@ -3,18 +3,18 @@ import py5
 def noFeature():
     py5.no_stroke()
 
-def flushedCheeks():
+def flushedCheeks(weight):
     py5.no_stroke()
     py5.fill(247,137,74)
-    py5.ellipse(60, 110, 25, 25) #left cheek
-    py5.ellipse(140, 110, 25, 25 ) #right cheek
+    py5.ellipse(60, 110, 25*weight, 25*weight) #left cheek
+    py5.ellipse(140, 110, 25*weight, 25*weight) #right cheek
     py5.no_fill()
 
-def darkFlushedCheeks():
+def darkFlushedCheeks(weight):
     py5.no_stroke()
     py5.fill(172, 11, 25)
-    py5.ellipse(65, 110, 25,25) #left cheek
-    py5.ellipse(135, 110, 25,25) #right cheek
+    py5.ellipse(65, 110, 25*weight,25*weight) #left cheek
+    py5.ellipse(135, 110, 25*weight,25*weight) #right cheek
     py5.no_fill()
 
 def tearDrop():
@@ -26,12 +26,12 @@ def tearDrop():
     py5.no_fill()
 
 
-def drawFeature(emotionalState):
+def drawFeature(emotionalState, weight):
     if (emotionalState > 26 and emotionalState < 29.6) or (emotionalState > 12 and emotionalState < 13):
-        flushedCheeks()
+        flushedCheeks(weight)
     elif (emotionalState > 16 and emotionalState < 22):
         tearDrop()
     elif (emotionalState <-21 and emotionalState >-23):
-        darkFlushedCheeks()
+        darkFlushedCheeks(weight)
     else: 
         noFeature()
