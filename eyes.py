@@ -26,8 +26,8 @@ def ovalEyes(weight):
     # py5.stroke_weight(10)
     py5.no_stroke()
     py5.fill(0) #color black
-    py5.ellipse(75,90,5+weight,12) #left eye
-    py5.ellipse(125,90,5+weight,12) #right eye
+    py5.ellipse(75,90,5*weight,12*weight) #left eye
+    py5.ellipse(125,90,5*weight,12*weight) #right eye
     py5.no_fill()
 
 def shallowDowncast(weight):

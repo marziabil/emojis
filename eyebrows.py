@@ -30,16 +30,16 @@ def highlyFurrowedOrange(weight):
 def highlyFurrowedBlack(weight):
     py5.stroke(0) #color of eyebrow - black
     py5.stroke_weight(6*weight) 
-    py5.line(60-weight, 50+weight, 85, 75+weight) #left eyebrow
-    py5.line(115-weight, 75+weight, 140, 50+weight) #right eyebrow 
+    py5.line(60-weight, 50*weight, 85, 75) #left eyebrow
+    py5.line(115-weight, 75, 140, 50*weight) #right eyebrow 
     
 
 #raised eyebrows (lower positioned)
 def raisedEyebrowsLow(weight):
     py5.stroke(204, 153, 0)
     py5.stroke_weight(6*weight)
-    py5.arc(160-weight, 75+weight, 225+weight, 20+weight, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
-    py5.arc(115+weight, 75+weight, 65+weight, 20+weight, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow
+    py5.arc(160+weight, 75+weight, 225, 26*weight, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
+    py5.arc(115+weight, 75+weight, 65, 20*weight, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow
     
 
 #raised eyebrows (higher placed)
@@ -48,7 +48,7 @@ def raisedEyebrowsHigh(weight):
     py5.stroke_weight(6*weight)
     py5.arc(165-weight, 70+weight, 225, 26*weight, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
     py5.arc(115+weight, 70+weight, 65, 20*weight, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow  
-    # print("a")
+    
     
 def drawEyebrows(emotionalState, weight):
     if (emotionalState > 25.6 and emotionalState < 29) or (emotionalState > 30 and emotionalState < 36.899):
@@ -63,7 +63,7 @@ def drawEyebrows(emotionalState, weight):
     elif (emotionalState < -23 and emotionalState > -25):
         highlyFurrowedOrange(weight)
         
-    elif (emotionalState < -21 and emotionalState > -23) or (emotionalState < -18 and emotionalState > -19) or (emotionalState < -12 and emotionalState > -13):
+    elif (emotionalState < -21 and emotionalState > -23):
         highlyFurrowedBlack(weight)
     elif (emotionalState <-25 and emotionalState > -29):
         raisedEyebrowsLow(weight) #lower
