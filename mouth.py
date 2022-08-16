@@ -23,7 +23,7 @@ def crumpledMouth():
 def frowningMouth(weight):
     py5.stroke_weight(6*weight)
     py5.stroke(0)
-    py5.arc(100, 142, 65+weight, 40+weight, py5.PI, py5.TWO_PI) 
+    py5.arc(100, 142, 65, 20*weight, py5.PI, py5.TWO_PI) 
 
 def openMouth(weight):
     py5.fill(0)
@@ -33,7 +33,8 @@ def openMouth(weight):
 def smilingMouth(weight):
     py5.stroke_weight(6*weight)
     py5.stroke(0)
-    py5.arc(py5.width*0.5, py5.height*0.67, 80+weight, 37+weight, 0, py5.radians(180))
+    py5.arc((py5.width*0.5), (py5.height*0.67), 80, 37*weight, 0, py5.radians(180))
+    
 
 def shortStraight(weight):
     py5.stroke_weight(6*weight)
@@ -41,14 +42,14 @@ def shortStraight(weight):
     py5.line(80-weight, 140+weight, 120+weight, 140+weight)
     
 
-def happyMouth():
+def happyMouth(weight):
     py5.stroke_weight(6)
     py5.fill(0)
-    py5.arc(py5.width*0.5, py5.height* 0.67, 80, 55, 0, py5.radians(180), py5.CHORD)
+    py5.arc(py5.width*0.5, (py5.height* 0.67)-weight, 80, 55, 0, py5.radians(180), py5.CHORD)
     #teeth
     py5.stroke(255)
     py5.fill(255)
-    py5.quad(66,137, 135, 137,134, 140, 67, 140)
+    py5.quad(66-weight,137-weight, 135+weight, 137-weight,134+weight, 140, 67-weight, 140)
     #tongue
     py5.stroke_weight(2)
     py5.stroke(255, 0, 102)
@@ -58,7 +59,7 @@ def happyMouth():
 def smileHigh(weight):
     py5.stroke_weight(5*weight)
     py5.no_fill()
-    py5.arc(py5.width*0.5, py5.height* 0.6, 80+weight, 37+weight, 0, py5.radians(180), py5.OPEN)   
+    py5.arc((py5.width*0.5), (py5.height* 0.6), 80, 37*weight, 0, py5.radians(180), py5.OPEN)   
 
 def clenchedTeeth():
     py5.stroke(0)
@@ -79,11 +80,11 @@ def longStraight(weight):
 def frowningOpen(weight):
     py5.stroke_weight(6)
     py5.fill(0)
-    py5.arc(py5.width*0.5, py5.height*0.72, 80, 55, py5.PI, py5.TWO_PI, py5.CHORD)
+    py5.arc(py5.width*0.5, py5.height*0.72, 80, 30*weight, py5.PI, py5.TWO_PI, py5.CHORD)
     #teeth
     py5.stroke(255)
     py5.fill(255)
-    py5.arc(py5.width* 0.5, 124, 40,6, py5.PI, py5.TWO_PI, py5.CHORD)
+    py5.arc(py5.width* 0.5, 124, 40,6+weight, py5.PI, py5.TWO_PI, py5.CHORD)
 
 def openShocked(weight):
     py5.fill(0)
@@ -91,7 +92,7 @@ def openShocked(weight):
     #teeth
     py5.stroke(255)
     py5.fill(255)
-    py5.arc(py5.width*0.5, 125, 10+weight,2+weight, py5.PI, py5.TWO_PI, py5.CHORD)
+    py5.arc(py5.width*0.5, 125, 15+weight,0.5+weight, py5.PI, py5.TWO_PI, py5.CHORD)
     
 
 def drawMouth(emotionalState, weight):
@@ -106,14 +107,14 @@ def drawMouth(emotionalState, weight):
     elif (emotionalState > 10 and emotionalState < 13): 
         shortStraight(weight)
     elif (emotionalState > 29.7 and emotionalState < 36):
-        happyMouth()
-    elif (emotionalState > 37 and emotionalState > 29.5):
+        happyMouth(weight)
+    elif (emotionalState < 29.7 and emotionalState > 29.2):
         openShocked(weight)
-    elif (emotionalState > 26 and emotionalState < 29.5):
+    elif (emotionalState > 25 and emotionalState < 28.5):
         smileHigh(weight)
     elif (emotionalState < -22 and emotionalState > -23):
         clenchedTeeth()
-    elif (emotionalState > 17 and emotionalState < 26) or (emotionalState < -28 and emotionalState > -29):
+    elif (emotionalState > 17 and emotionalState < 25) or (emotionalState < -28 and emotionalState > -29):
         frowningOpen(weight)
     else: 
         longStraight(weight)

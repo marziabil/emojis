@@ -33,20 +33,22 @@ def ovalEyes(weight):
 def shallowDowncast(weight):
     py5.stroke(0)
     py5.stroke_weight(6*weight)
-    py5.arc(75, 90, 35, 32.5, 0, py5.PI) #left eye
-    py5.arc(125, 90, 35, 32.5, 0, py5.PI) #right eye
+    py5.arc(75, 90, 35, 32.5*weight, 0, py5.PI) #left eye
+    py5.arc(125, 90, 35, 32.5*weight, 0, py5.PI) #right eye
+    
 
 def deepDowncast(weight):
     py5.stroke(0)
     py5.stroke_weight(6*weight)
-    py5.arc(75, 90, 37, 40 , 0, py5.PI) #left eye
-    py5.arc(125, 90, 37, 40 , 0, py5.PI) #right eye
+    py5.arc(75, 90, 37, 15*weight, 0, py5.PI) #left eye
+    py5.arc(125, 90, 37, 15*weight, 0, py5.PI) #right eye
+    
 
 def smilingEyes(weight):
     py5.stroke(0)
     py5.stroke_weight(6*weight)
-    py5.arc(75-weight, 95+weight, 37.5+weight, 20+weight , py5.PI, py5.TWO_PI) #left eye
-    py5.arc(125+weight, 95+weight, 37.5+weight, 20+weight, py5.PI, py5.TWO_PI) #right eye 
+    py5.arc(75, 95, 37.5, 20*weight , py5.PI, py5.TWO_PI) #left eye
+    py5.arc(125, 95, 37.5, 20*weight, py5.PI, py5.TWO_PI) #right eye 
     
 
 def straightEyes(weight):
@@ -78,25 +80,25 @@ def whiteEyes(weight):
     py5.stroke_weight(2)
     py5.stroke(0) #color black
     py5.fill(255)
-    py5.ellipse(75,90,25 * weight,32 * weight) #left eye
-    py5.ellipse(125,90,25 * weight,32 * weight) #right eye
+    py5.ellipse(75,90,12 * weight,16 * weight) #left eye
+    py5.ellipse(125,90,12 * weight,16 * weight) #right eye
     py5.no_fill()
     
 
 def drawEyes(emotionalState, weight):  
     if (emotionalState > 22 and emotionalState < 23):
         xShaped()  
-    elif (emotionalState > 13 and emotionalState < 18) or (emotionalState < -21 and emotionalState > -23) or (emotionalState > 23 and emotionalState < 24) or (emotionalState < -28 and emotionalState > -30):
+    elif (emotionalState > 13 and emotionalState < 18) or (emotionalState < -21 and emotionalState > -24) or (emotionalState > 23 and emotionalState < 24) or (emotionalState < -28 and emotionalState > -30):
         ovalEyes(weight)  
     elif (emotionalState > 21 and emotionalState <  26):
         shallowDowncast(weight)
     elif (emotionalState <-24 and emotionalState > -28):
         deepDowncast(weight)
-    elif (emotionalState > 26 and emotionalState < 29.5):
+    elif (emotionalState > 26 and emotionalState < 29.2):
         smilingEyes(weight)
     elif (emotionalState < -12 and emotionalState > -18):
         straightEyes(weight)
-    elif (emotionalState < 37 and emotionalState >29.5 ) or (emotionalState > 12 and emotionalState < 13): 
+    elif (emotionalState < 37 and emotionalState >29.2 ) or (emotionalState > 12 and emotionalState < 13): 
         wideOpenEyes(weight)    
     else: 
         whiteEyes(weight)

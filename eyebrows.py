@@ -15,10 +15,8 @@ def straightEyebrows(weight):
 def slightlyFurrowed(weight):
     py5.stroke(204, 153, 0)
     py5.stroke_weight(6*weight)
-    py5.arc(50-weight, 50+weight, 80+weight, 30+weight, 0, py5.HALF_PI) #left eyebrow
-    py5.arc(150-weight, 50+weight, 80+weight, 30+weight, py5.HALF_PI, py5.PI) #right eyebrow
-    print("a")
-    
+    py5.arc(50-weight, 50+weight, 80+weight, 30, 0, py5.HALF_PI) #left eyebrow
+    py5.arc(150-weight, 50+weight, 80+weight, 30, py5.HALF_PI, py5.PI) #right eyebrow
 
 #highly furrowed orange
 def highlyFurrowedOrange(weight):
@@ -48,12 +46,12 @@ def raisedEyebrowsLow(weight):
 def raisedEyebrowsHigh(weight):
     py5.stroke(204, 153, 0)
     py5.stroke_weight(6*weight)
-    py5.arc(165-weight, 70+weight, 220+weight, 20+weight, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
-    py5.arc(115+weight, 70+weight, 65+weight, 20+weight, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow  
-    
+    py5.arc(165-weight, 70+weight, 225, 26*weight, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
+    py5.arc(115+weight, 70+weight, 65, 20*weight, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow  
+    # print("a")
     
 def drawEyebrows(emotionalState, weight):
-    if (emotionalState > 25.6 and emotionalState < 29 and emotionalState > 30 and emotionalState < 36.899):
+    if (emotionalState > 25.6 and emotionalState < 29) or (emotionalState > 30 and emotionalState < 36.899):
         noEyebrows() #no eyebrows
         
     elif (emotionalState > 16 and emotionalState < 21):
@@ -65,7 +63,7 @@ def drawEyebrows(emotionalState, weight):
     elif (emotionalState < -23 and emotionalState > -25):
         highlyFurrowedOrange(weight)
         
-    elif (emotionalState < -21 and emotionalState > -23):
+    elif (emotionalState < -21 and emotionalState > -23) or (emotionalState < -18 and emotionalState > -19) or (emotionalState < -12 and emotionalState > -13):
         highlyFurrowedBlack(weight)
     elif (emotionalState <-25 and emotionalState > -29):
         raisedEyebrowsLow(weight) #lower
