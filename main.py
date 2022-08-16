@@ -12,8 +12,8 @@ from extraFeature import drawFeature
 from fuzzyLogic import findEmotionalState
 # from gui import getArousal, getValence
 
-xValence = 0.55 #enter x coordinate here
-yArousal = -0.8 #enter y coordinate here
+xValence = 0.38 #enter x coordinate here
+yArousal = -0.93 #enter y coordinate here
 
 def getWeightValue():
     global weight

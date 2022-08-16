@@ -15,41 +15,41 @@ def straightEyebrows(weight):
 def slightlyFurrowed(weight):
     py5.stroke(204, 153, 0)
     py5.stroke_weight(6*weight)
-    py5.arc(50, 50, 80, 30, 0, py5.HALF_PI) #left eyebrow
-    py5.arc(150, 50, 80, 30, py5.HALF_PI, py5.PI) #right eyebrow
-    
+    py5.arc(50-weight, 50+weight, 80+weight, 30+weight, 0, py5.HALF_PI) #left eyebrow
+    py5.arc(150-weight, 50+weight, 80+weight, 30+weight, py5.HALF_PI, py5.PI) #right eyebrow
+    print("a")
     
 
 #highly furrowed orange
 def highlyFurrowedOrange(weight):
     py5.stroke(204, 153, 0) #color of eyebrow - orange
     py5.stroke_weight(6*weight) 
-    py5.line(60, 65+weight, 85, 40+weight) #left eyebrow
-    py5.line(115, 40+weight, 140, 65+weight) #right eyebrow 
+    py5.line(60-weight, 65+weight, 85, 40+weight) #left eyebrow
+    py5.line(115-weight, 40+weight, 140, 65+weight) #right eyebrow 
     
 
 #highly furrowed black
 def highlyFurrowedBlack(weight):
     py5.stroke(0) #color of eyebrow - black
     py5.stroke_weight(6*weight) 
-    py5.line(60, 50+weight, 85, 75+weight) #left eyebrow
-    py5.line(115, 75+weight, 140, 50+weight) #right eyebrow 
+    py5.line(60-weight, 50+weight, 85, 75+weight) #left eyebrow
+    py5.line(115-weight, 75+weight, 140, 50+weight) #right eyebrow 
     
 
 #raised eyebrows (lower positioned)
 def raisedEyebrowsLow(weight):
     py5.stroke(204, 153, 0)
     py5.stroke_weight(6*weight)
-    py5.arc(160, 75, 225, 20, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
-    py5.arc(115, 75, 65, 20, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow
+    py5.arc(160-weight, 75+weight, 225+weight, 20+weight, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
+    py5.arc(115+weight, 75+weight, 65+weight, 20+weight, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow
     
 
 #raised eyebrows (higher placed)
 def raisedEyebrowsHigh(weight):
     py5.stroke(204, 153, 0)
     py5.stroke_weight(6*weight)
-    py5.arc(165, 70, 220, 20, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
-    py5.arc(115, 70, 65, 20, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow  
+    py5.arc(165-weight, 70+weight, 220+weight, 20+weight, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
+    py5.arc(115+weight, 70+weight, 65+weight, 20+weight, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow  
     
     
 def drawEyebrows(emotionalState, weight):
