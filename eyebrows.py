@@ -40,13 +40,12 @@ def raisedEyebrowsLow(weight):
     py5.stroke_weight(6*weight)
     py5.arc(160+weight, 75+weight, 225, 26*weight, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
     py5.arc(115+weight, 75+weight, 65, 20*weight, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow
-    
 
 #raised eyebrows (higher placed)
 def raisedEyebrowsHigh(weight):
     py5.stroke(204, 153, 0)
     py5.stroke_weight(6*weight)
-    py5.arc(165-weight, 70+weight, 225, 26*weight, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
+    py5.arc(165+weight, 70+weight, 225, 26*weight, py5.PI, py5.PI+py5.QUARTER_PI) #left eyebrow
     py5.arc(115+weight, 70+weight, 65, 20*weight, py5.TWO_PI-py5.HALF_PI, py5.TWO_PI) #right eyebrow  
     
     
