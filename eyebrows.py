@@ -66,36 +66,5 @@ def drawEyebrows(emotionalState, weight):
         highlyFurrowedBlack(weight)
     elif (emotionalState <-25 and emotionalState > -29):
         raisedEyebrowsLow(weight) #lower
-
     else: 
         raisedEyebrowsHigh(weight) #higher placed
-
-
-
-# def drawEyebrows(emotionalState):
-#     if (emotionalState > 25.6 and emotionalState < 36.899) or (emotionalState > -25.34 and emotionalState < -12.1250158):
-#         noEyebrows() #no eyebrows:
-#     elif (emotionalState > 3.1 and emotionalState < 9.42):
-#         straightEyebrows() # straight eyebrows
-#     elif (emotionalState > 9.42 and emotionalState < 15.74): 
-#         slightlyFurrowed() 
-#     elif (emotionalState > 15.74 and emotionalState < 22.06):
-#         highlyFurrowed()
-#     elif (emotionalState <-25.94 and emotionalState > -29.81):
-#         raisedEyebrows() #lower
-#     else: 
-#         raisedEyebrowsHigh() #higher places
-
-# def drawEyebrows(emotionalState):
-#     if (emotionalState > 25.6 and emotionalState < 36.899) or (emotionalState < -25.34 and emotionalState > -12.1250158):
-#         noEyebrows() #no eyebrows:
-#     elif (emotionalState > 12.46 and emotionalState < 22.06 and emotionalState < 19.5 and emotionalState < 18.91):
-#         straightEyebrows() # straight eyebrows
-#     elif (emotionalState > 23.1 and emotionalState > 20.96 and emotionalState < -20 and emotionalState < -28.59) or (emotionalState > 24.4 and emotionalState > -22 and emotionalState < 18.91 and emotionalState < 25.6):
-#         slightlyFurrowed() 
-#     elif (emotionalState > 24.4 and emotionalState > 23.959 and emotionalState < 20.96 and emotionalState <23.01 ):
-#         highlyFurrowed()
-#     elif (emotionalState > 25.75 and emotionalState > 27.87 and emotionalState < 28.979 and emotionalState < 29.81):
-#         raisedEyebrows() #lower
-#     else: 
-#         raisedEyebrowsHigh() #higher places

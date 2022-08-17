@@ -102,13 +102,6 @@ def drawEyes(emotionalState, weight):
         wideOpenEyes(weight)    
     else: 
         whiteEyes(weight)
-            
-        
-# def deepSmile():
-#     py5.stroke(0)
-#     py5.no_fill()
-#     py5.stroke_weight(6)
-#     py5.arc(75, 95, 37.5, 30, py5.PI, py5.TWO_PI) #left eye
-#     py5.arc(125, 95, 37.5, 30, py5.PI, py5.TWO_PI) #right eye
+
 
         
