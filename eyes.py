@@ -36,20 +36,17 @@ def shallowDowncast(weight):
     py5.arc(75, 90, 35, 32.5*weight, 0, py5.PI) #left eye
     py5.arc(125, 90, 35, 32.5*weight, 0, py5.PI) #right eye
     
-
 def deepDowncast(weight):
     py5.stroke(0)
     py5.stroke_weight(6*weight)
     py5.arc(75, 90, 37, 15*weight, 0, py5.PI) #left eye
     py5.arc(125, 90, 37, 15*weight, 0, py5.PI) #right eye
     
-
 def smilingEyes(weight):
     py5.stroke(0)
     py5.stroke_weight(6*weight)
     py5.arc(75, 95, 37.5, 20*weight , py5.PI, py5.TWO_PI) #left eye
-    py5.arc(125, 95, 37.5, 20*weight, py5.PI, py5.TWO_PI) #right eye 
-    
+    py5.arc(125, 95, 37.5, 20*weight, py5.PI, py5.TWO_PI) #right eye   
 
 def straightEyes(weight):
     py5.stroke(0)

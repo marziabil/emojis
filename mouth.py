@@ -33,15 +33,13 @@ def openMouth(weight):
 def smilingMouth(weight):
     py5.stroke_weight(6*weight)
     py5.stroke(0)
-    py5.arc((py5.width*0.5), (py5.height*0.67), 80, 37*weight, 0, py5.radians(180))
-    
+    py5.arc((py5.width*0.5), (py5.height*0.67), 80, 37*weight, 0, py5.radians(180))    
 
 def shortStraight(weight):
     py5.stroke_weight(6*weight)
     py5.stroke(0)
     py5.line(80-weight, 140+weight, 120+weight, 140+weight)
     
-
 def happyMouth(weight):
     py5.stroke_weight(6)
     py5.fill(0)
