@@ -19,17 +19,17 @@ emotionArousal = {"Adventurous": 0.91, "Afraid": 0.79, "Alarmed": 0.89, "Ambitio
 Enter a word below from the above or the Excel file 'Emotions' to generate an emoji. 
 Comment out the below if you wish to enter a word (emotion)
 '''
-word = "Embarassed" #enter the emotion here
-xValence = float(emotionValence[word])
-yArousal = float(emotionArousal[word])
+# word = "Lusting" #enter the emotion here
+# xValence = float(emotionValence[word])
+# yArousal = float(emotionArousal[word])
 
 '''
 Enter values between -1.0 and 1.0 for both valence and arousal. 
 Comment out the above if you wish to enter numbers
 '''
 
-# xValence = 0.42 #enter x coordinate here between -1.0 and 1.0
-# yArousal = 0.79 #enter y coordinate here between -1.0 and 1.0
+xValence = 0.42 #enter x coordinate here between -1.0 and 1.0
+yArousal = 0.79 #enter y coordinate here between -1.0 and 1.0
 
 def getWeightValue():
     global weight
@@ -62,7 +62,7 @@ def draw():
     drawFeature(emotionalState, weight)
     drawEyes(emotionalState, weight)
     drawMouth(emotionalState, weight)   
-    py5.save_frame('/tmp/emoji.png') #to download generated emoji
+    # py5.save_frame('/tmp/emoji.png') #to download generated emoji
     
 py5.run_sketch() #to generate the emoji in a new window
 
