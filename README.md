@@ -49,11 +49,16 @@ A quick Google Image search showed similar expressions as well:
 
 ![image](https://user-images.githubusercontent.com/94219257/177793571-bbf788b2-2dc2-4eb4-afea-ae6069c6f3a4.png)
 
+### Fuzzy Logic 
+To enable the software to make its own decisions, fuzzy logic was used (Artificial Intelligence). 
+
 ### Next steps
 
 Since the features could be the same for particular emotions based on the rules, the next step would be to implement fuzzy rules which would make the reasoning approximate instead of being fixed and exact. This would allow every emoji to be unique based on its coordinates. For instance, the 'furrowness' of the eyebrows would increase slightly as the intensity increases. 
 
-Moreover, the existing work has to be mapped to the next three quadrants as well. Currently, the code only works for emojis with negative x and y coordinates. 
+Moreover, the existing work has to be mapped to the next three quadrants as well. Currently, the code only works for emojis with negative x and y coordinates.
+
+##To read the full report please drop me a message!
 
 ### References
 Doble, A., 2015. UK's fastest growing language is... emoji. [online] BBC News. Available at: <https://www.bbc.co.uk/news/newsbeat-32793732> [Accessed 30 June 2022].
