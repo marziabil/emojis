@@ -1,122 +1,104 @@
-class Eyes(object):
+import py5
     
-    #constructor
-    def __init__(self, eyeType):
-        self.color = color(0) #color of eye - black
-        # self.xValence = xValence #x coordinate of emotion - valence
-        # self.yArousal = yArousal #y coordinate of emotion - arousal
-        self.eyeType = eyeType
+def xShaped():
+    py5.stroke(0)
+    py5.stroke_weight(6) #upper half of x and thinner part
+    py5.line(45,75,65,85)
+    py5.stroke_weight(8) #upper half of x and thicker part
+    py5.line(65,85,85,95)
+    py5.stroke_weight(8) #lower half of x and thicker part
+    py5.line(65,105, 85, 95)
+    py5.stroke_weight(6) #lower half of x and thinner part
+    py5.line(45, 115, 65, 105)
     
-    def xShaped(self):
-        stroke(self.color)
-        strokeWeight(6) #upper half of x and thinner part
-        line(45,75,65,85)
-        strokeWeight(8) #upper half of x and thicker part
-        line(65,85,85,95)
-        strokeWeight(8) #lower half of x and thicker part
-        line(65,105, 85, 95)
-        strokeWeight(6) #lower half of x and thinner part
-        line(45, 115, 65, 105)
-        
-        #right eye
-        stroke(self.color)
-        strokeWeight(8) #upper half of x
-        line(115, 95, 135, 85)
-        strokeWeight(6) #upper half of x
-        line(135, 85, 155, 75)
-        strokeWeight(8) # lower half of x
-        line(115, 95, 135, 105)
-        strokeWeight(6) # lower half of x
-        line(135, 105, 155, 115)
+    #right eye
+    py5.stroke(0)
+    py5.stroke_weight(8) #upper half of x
+    py5.line(115, 95, 135, 85)
+    py5.stroke_weight(6) #upper half of x
+    py5.line(135, 85, 155, 75)
+    py5.stroke_weight(8) # lower half of x
+    py5.line(115, 95, 135, 105)
+    py5.stroke_weight(6) # lower half of x
+    py5.line(135, 105, 155, 115)
 
-    def ovalEyes(self):
-        strokeWeight(10)
-        stroke(self.color) #color black
-        fill(self.color)
-        ellipse(75,90,5,12) #left eye
-        ellipse(125,90,5,12) #right eye
+def ovalEyes(weight):
+    # py5.stroke_weight(10)
+    py5.no_stroke()
+    py5.fill(0) #color black
+    py5.ellipse(75,90,5*weight,12*weight) #left eye
+    py5.ellipse(125,90,5*weight,12*weight) #right eye
+    py5.no_fill()
+
+def shallowDowncast(weight):
+    py5.stroke(0)
+    py5.stroke_weight(6*weight)
+    py5.arc(75, 90, 35, 32.5*weight, 0, py5.PI) #left eye
+    py5.arc(125, 90, 35, 32.5*weight, 0, py5.PI) #right eye
     
-    def shallowDowncast(self):
-        stroke(self.color)
-        noFill()
-        strokeWeight(6)
-        arc(75, 90, 35, 32.5, 0, PI) #left eye
-        arc(125, 90, 35, 32.5, 0, PI) #right eye
-
-    def deepDowncast(self):
-        stroke(self.color)
-        noFill()
-        strokeWeight(6)
-        arc(75, 90, 37, 40, 0, PI) #left eye
-        arc(125, 90, 37, 40, 0, PI) #right eye
-
-    def shallowSmile(self):
-        stroke(self.color)
-        noFill()
-        strokeWeight(6)
-        arc(75, 95, 37.5, 20, PI, TWO_PI) #left eye
-        arc(125, 95, 37.5, 20, PI, TWO_PI) #right eye 
-
-    def straightEyes(self):
-        stroke(self.color)
-        noFill()
-        strokeWeight(6)
-        line(55, 85, 90, 85) #left eye
-        line(110, 85, 145, 85) #right eye
-
-    def wideOpenEyes(self):
-        strokeWeight(10)
-        stroke(255) #color white
-        ellipse(75,90,17.5,17.5) #left eye
-        fill(255) #color white
-        stroke(0) #color black
-        fill(self.color)
-        ellipse(75,90,5,5) #left eye
+def deepDowncast(weight):
+    py5.stroke(0)
+    py5.stroke_weight(6*weight)
+    py5.arc(75, 90, 37, 15*weight, 0, py5.PI) #left eye
+    py5.arc(125, 90, 37, 15*weight, 0, py5.PI) #right eye
     
-        strokeWeight(10)
-        stroke(255) #color white
-        ellipse(125,90,17.5,17.5) #right eye
-        fill(255) #color white
-        stroke(0) #color black
-        fill(self.color)
-        ellipse(125,90,5,5) #left eye
+def smilingEyes(weight):
+    py5.stroke(0)
+    py5.stroke_weight(6*weight)
+    py5.arc(75, 95, 37.5, 20*weight , py5.PI, py5.TWO_PI) #left eye
+    py5.arc(125, 95, 37.5, 20*weight, py5.PI, py5.TWO_PI) #right eye   
 
-    def deepSmile(self):
-        stroke(self.color)
-        noFill()
-        strokeWeight(6)
-        arc(75, 95, 37.5, 30, PI, TWO_PI) #left eye
-        arc(125, 95, 37.5, 30, PI, TWO_PI) #right eye
+def straightEyes(weight):
+    py5.stroke(0)
+    py5.stroke_weight(6*weight)
+    py5.line(55-weight, 85, 90, 85) #left eye
+    py5.line(110, 85, 145+weight, 85) #right eye
 
-    def whiteEyes(self):
-        strokeWeight(2)
-        stroke(0) #color black
-        fill(255)
-        ellipse(75,90,25,32) #left eye
-        ellipse(125,90,25,32) #right eye
+def wideOpenEyes(weight):
+    # py5.stroke_weight(10)
+    py5.stroke(255) #color white
+    py5.fill(255) #color white
+    py5.ellipse(75-weight,90+weight,25+weight,25+weight ) #left eye
+    py5.stroke(0) #color black
+    py5.fill(0)
+    py5.ellipse(75-weight,90+weight,8+weight ,8+weight ) #left eye
+    py5.no_fill()
 
-    def display(self):  
-        if self.eyeType == "xShaped":
-            self.xShaped()  
-        elif self.eyeType == "oval":
-            self.ovalEyes()  
-        elif self.eyeType == "shallowDowncast":
-            self.shallowDowncast()
-        elif self.eyeType == "deepDowncast":
-            self.deepDowncast()
-        elif self.eyeType == "shallowSmile":
-            self.shallowSmile()
-        elif self.eyeType == "straightEyes":
-            self.straightEyes()
-        elif self.eyeType == "wideOpenEyes": 
-            self.wideOpenEyes()    
-        elif self.eyeType == "deepSmile":    
-           self.deepSmile()
-        else: 
-            self.whiteEyes()
-            
-        
+    # py5.stroke_weight(10)
+    py5.stroke(255) #color white
+    py5.fill(255) #color white
+    py5.ellipse(125+weight,90+weight,25 +weight,25+weight ) #right eye
+    py5.stroke(0) #color black
+    py5.fill(0)
+    py5.ellipse(125+weight,90+weight,8+weight ,8+weight ) #left eye
+    py5.no_fill()
 
+def whiteEyes(weight):
+    py5.stroke_weight(2)
+    py5.stroke(0) #color black
+    py5.fill(255)
+    py5.ellipse(75,90,12 * weight,16 * weight) #left eye
+    py5.ellipse(125,90,12 * weight,16 * weight) #right eye
+    py5.no_fill()
     
+
+def drawEyes(emotionalState, weight):  
+    if (emotionalState > 22 and emotionalState < 23):
+        xShaped()  
+    elif (emotionalState > 13 and emotionalState < 18) or (emotionalState < -21 and emotionalState > -24) or (emotionalState > 23 and emotionalState < 24) or (emotionalState < -28 and emotionalState > -30):
+        ovalEyes(weight)  
+    elif (emotionalState > 21 and emotionalState <  26):
+        shallowDowncast(weight)
+    elif (emotionalState <-24 and emotionalState > -28):
+        deepDowncast(weight)
+    elif (emotionalState > 26 and emotionalState < 29.2):
+        smilingEyes(weight)
+    elif (emotionalState < -12 and emotionalState > -18):
+        straightEyes(weight)
+    elif (emotionalState < 37 and emotionalState >29.2 ) or (emotionalState > 12 and emotionalState < 13): 
+        wideOpenEyes(weight)    
+    else: 
+        whiteEyes(weight)
+
 
         
