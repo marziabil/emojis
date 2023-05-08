@@ -22,7 +22,7 @@ FS.add_linguistic_variable("Arousal", LinguisticVariable([A_1,A_2,A_3,A_4,A_5], 
 # # Define output fuzzy sets and linguistic variable for overall emotional state
 F_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0,c=4,d=8), term="veryUnpleasant")
 F_2 = FuzzySet(function=Trapezoidal_MF(a=2, b=6,c=16,d=24), term="unpleasant")
-F_3 = FuzzySet(function=Triangular_MF(a=16,b=20,c=24), term="neutral")
+F_3 = FuzzySet(function=Triangular_MF(a=16,b=20,c=20), term="neutral")
 F_4 = FuzzySet(function=Trapezoidal_MF(a=16,b=24,c=34,d=38), term="pleasant")
 F_5 = FuzzySet(function=Trapezoidal_MF(a=32,b=36,c=40,d=40), term="veryHigh")
 FS.add_linguistic_variable ("emotionalState", LinguisticVariable([F_1, F_2, F_3, F_4, F_5], universe_of_discourse=[0,40]))
